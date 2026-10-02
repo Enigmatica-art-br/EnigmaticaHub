@@ -2,9 +2,10 @@
 // Deixe url: null enquanto o endereço ainda não estiver confirmado.
 const links = [
   { title: 'Portfólio', description: 'Design, criação e trabalhos selecionados.', url: 'https://enigmatica-art-br.github.io/ItzPortf-lio/' },
-  { title: 'Projetos pessoais', description: 'Experimentos e trabalhos independentes.', url: null },
+  { title: 'Projetos pessoais', description: 'Experimentos e trabalhos independentes.', url: 'https://enigmatica-art-br.github.io/personal-projects/' },
   { title: 'Case 27: Noema', description: 'Uma experiência em desenvolvimento.', url: null }
 ];
+
 
 const nav = document.querySelector('#project-links');
 for (const [index, item] of links.entries()) {
@@ -13,9 +14,11 @@ for (const [index, item] of links.entries()) {
   if (item.url) card.href = item.url;
   else card.setAttribute('aria-disabled', 'true');
 
+
   const number = document.createElement('span');
   number.className = 'card-number';
   number.textContent = String(index + 1).padStart(2, '0');
+
 
   const copy = document.createElement('span');
   copy.className = 'card-copy';
@@ -27,6 +30,7 @@ for (const [index, item] of links.entries()) {
   description.textContent = item.description;
   copy.append(title, description);
 
+
   const end = document.createElement('span');
   end.className = item.url ? 'card-arrow' : 'card-soon';
   end.textContent = item.url ? '↗' : 'Em breve';
@@ -34,5 +38,3 @@ for (const [index, item] of links.entries()) {
   card.append(number, copy, end);
   nav.append(card);
 }
-
-document.querySelector('#year').textContent = new Date().getFullYear();
