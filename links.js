@@ -1,10 +1,12 @@
 // Edite somente esta lista para adicionar, remover ou reorganizar destinos.
 // Deixe url: null enquanto o endereço ainda não estiver confirmado.
 const links = [
-  { title: 'Portfólio', description: 'Design, criação e trabalhos selecionados.', url: 'https://enigmatica-art-br.github.io/ItzPortf-lio/' },
-  { title: 'Projetos pessoais', description: 'Experimentos e trabalhos independentes.', url: 'https://enigmatica-art-br.github.io/personal-projects/' },
+  { title: 'Portfólio', description: 'Design, criação e trabalhos selecionados.', url: 'https://portfolio.enigmatica.art.br/' },
+  { title: 'Projetos pessoais', description: 'Experimentos e trabalhos independentes.', url: 'https://personal.enigmatica.art.br/' },
   { title: 'Case 27: Noema', description: 'Uma experiência em desenvolvimento.', url: null }
 ];
+
+
 
 
 const nav = document.querySelector('#project-links');
@@ -15,9 +17,13 @@ for (const [index, item] of links.entries()) {
   else card.setAttribute('aria-disabled', 'true');
 
 
+
+
   const number = document.createElement('span');
   number.className = 'card-number';
   number.textContent = String(index + 1).padStart(2, '0');
+
+
 
 
   const copy = document.createElement('span');
@@ -31,10 +37,8 @@ for (const [index, item] of links.entries()) {
   copy.append(title, description);
 
 
+
+
   const end = document.createElement('span');
   end.className = item.url ? 'card-arrow' : 'card-soon';
   end.textContent = item.url ? '↗' : 'Em breve';
-  if (item.url) end.setAttribute('aria-hidden', 'true');
-  card.append(number, copy, end);
-  nav.append(card);
-}
