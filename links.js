@@ -2,7 +2,7 @@
 // Deixe url: null enquanto o endereço ainda não estiver confirmado.
 const links = [
   { title: 'Portfólio', description: 'Design, criação e trabalhos selecionados.', url: 'https://portfolio.enigmatica.art.br/' },
-  { title: 'Projetos pessoais', description: 'Experimentos e trabalhos independentes.', url: 'https://personal.enigmatica.art.br/' },
+  { title: 'Projetos pessoais', description: 'Experimentos e trabalhos independentes.', url: 'https://projects.enigmatica.art.br/' },
   { title: 'Case 27: Noema', description: 'Uma experiência em desenvolvimento.', url: null }
 ];
 
