@@ -2,9 +2,6 @@ const links = [
   { title: 'Portfólio', description: 'Design, criação e trabalhos selecionados.', url: 'https://portfolio.enigmatica.art.br/' },
   { title: 'Projetos', description: 'Experimentos e projetos pessoais.', url: 'https://projects.enigmatica.art.br/' },
   { title: 'Noema', description: 'Página oficial do jogo no itch.io.', url: 'https://enigmatica-art.itch.io/noema' },
-  { title: 'Timer', description: 'Contagem regressiva da Enigmática.', url: 'https://timer.enigmatica.art.br/' },
-  { title: 'Editor', description: 'Editor 3D da Enigmática.', url: 'https://itzfenyxzeditor.enigmatica.art.br/' },
-  { title: 'ARG Codec', description: 'Codificador e decodificador para ARG.', url: 'https://argcodec.enigmatica.art.br/' },
   { title: 'YouTube', description: 'Vídeos e novidades da Enigmática.', url: 'https://www.youtube.com/@enigmatica-art' },
   { title: 'Discord', description: 'Entre na comunidade.', url: 'https://discord.gg/URapb2bbFA' },
   { title: 'Instagram', description: 'Acompanhe a Enigmática.', url: 'https://www.instagram.com/enigmatica.official/' }
