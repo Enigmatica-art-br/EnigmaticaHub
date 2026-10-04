@@ -1,7 +1,7 @@
 const links = [
-  { title: 'Portfólio', description: 'Design, criação e trabalhos selecionados.', url: 'https://portfolio.enigmatica.art.br/' },
-  { title: 'Projetos', description: 'Experimentos e projetos pessoais.', url: 'https://projects.enigmatica.art.br/' },
-  { title: 'Noema', description: 'Página oficial do jogo no itch.io.', url: 'https://enigmatica-art.itch.io/noema' },
+  { title: 'Noema — Site', description: 'Conheça o mundo e os mistérios de Noema.', url: 'https://games.enigmatica.art.br/noema/' },
+  { title: 'Noema — itch.io', description: 'Jogue Noema no itch.io.', url: 'https://enigmatica-art.itch.io/noema' },
+  { title: 'Noema — Steam', description: 'Página da Steam em preparação.', url: null },
   { title: 'YouTube', description: 'Vídeos e novidades da Enigmática.', url: 'https://www.youtube.com/@enigmatica-art' },
   { title: 'Discord', description: 'Entre na comunidade.', url: 'https://discord.gg/URapb2bbFA' },
   { title: 'Instagram', description: 'Acompanhe a Enigmática.', url: 'https://www.instagram.com/enigmatica.official/' }
@@ -10,12 +10,14 @@ const links = [
 const nav = document.querySelector('#project-links');
 
 for (const [index, item] of links.entries()) {
-  const card = document.createElement('a');
+  const card = document.createElement(item.url ? 'a' : 'div');
   card.className = 'project-card';
-  card.href = item.url;
   card.style.setProperty('--delay', (260 + index * 75) + 'ms');
 
-  if (!item.url.includes('enigmatica.art.br')) {
+  if (item.url) card.href = item.url;
+  else card.setAttribute('aria-disabled', 'true');
+
+  if (item.url && !item.url.includes('enigmatica.art.br')) {
     card.target = '_blank';
     card.rel = 'noreferrer';
   }
@@ -36,8 +38,8 @@ for (const [index, item] of links.entries()) {
   description.textContent = item.description;
 
   const arrow = document.createElement('span');
-  arrow.className = 'card-arrow';
-  arrow.textContent = '↗';
+  arrow.className = item.url ? 'card-arrow' : 'card-soon';
+  arrow.textContent = item.url ? '↗' : 'Em breve';
   arrow.setAttribute('aria-hidden', 'true');
 
   copy.append(title, description);

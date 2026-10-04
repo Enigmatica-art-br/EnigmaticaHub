@@ -137,7 +137,7 @@ main { flex: 1; padding: 15px 0 54px; }
   position: relative;
   min-height: 118px;
   display: grid;
-  grid-template-columns: 30px 1fr 22px;
+  grid-template-columns: 30px 1fr auto;
   align-items: center;
   gap: 13px;
   padding: 20px;
@@ -192,6 +192,15 @@ main { flex: 1; padding: 15px 0 54px; }
   font-size: 19px;
   transition: transform .3s ease;
 }
+.card-soon {
+  color: var(--muted);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  text-align: right;
+}
+.project-card[aria-disabled="true"] { cursor: default; }
 .project-card:hover .card-arrow { transform: translate(4px,-4px); }
 
 footer {
