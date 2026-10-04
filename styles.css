@@ -74,31 +74,13 @@ body::before {
 .logo-slot {
   position: relative;
   aspect-ratio: 1;
-  display: grid;
-  place-items: center;
-  border: 1px solid rgba(231,164,110,.56);
+  border: 1px solid rgba(242,238,230,.34);
   border-radius: 50%;
-  color: var(--muted);
-  font-size: 9px;
-  font-weight: 700;
-  letter-spacing: .28em;
   overflow: hidden;
+  background: #151616;
+  box-shadow: 0 14px 42px rgba(0,0,0,.32), 0 0 0 5px rgba(231,164,110,.055);
 }
-.logo-slot::before,
-.logo-slot::after {
-  content: "";
-  position: absolute;
-  inset: 16%;
-  border: 1px solid rgba(231,164,110,.28);
-  transform: rotate(45deg);
-}
-.logo-slot::after {
-  inset: 34%;
-  background: var(--accent);
-  border: 0;
-  animation: logoPulse 3.6s ease-in-out infinite;
-}
-.logo-slot span { position: relative; z-index: 1; transform: translateY(43px); }
+.logo-slot img { width: 100%; height: 100%; object-fit: cover; }
 
 .kicker {
   margin: 0 0 13px;
@@ -254,7 +236,6 @@ footer { animation-delay: 920ms; }
   .page-shell { width: min(calc(100% - 28px), 1180px); }
   .brand-block { grid-template-columns: 86px 1fr; gap: 20px; padding: 34px 0 26px; }
   h1 { font-size: clamp(44px, 15vw, 70px); }
-  .logo-slot span { transform: translateY(30px); font-size: 7px; }
   .kicker { font-size: 8px; letter-spacing: .2em; }
   .intro { margin-top: 12px; font-size: 16px; }
   main { padding-top: 6px; }
