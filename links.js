@@ -1,6 +1,6 @@
 const links = [
+  { title: 'Enigmática Games', description: 'Conheça os jogos da Enigmática.', url: 'https://games.enigmatica.art.br/' },
   { title: 'Noema — Site', description: 'Conheça o mundo e os mistérios de Noema.', url: 'https://games.enigmatica.art.br/noema/' },
-  { title: 'Noema — itch.io', description: 'Jogue Noema no itch.io.', url: 'https://enigmatica-art.itch.io/noema' },
   { title: 'Noema — Steam', description: 'Página da Steam em preparação.', url: null },
   { title: 'YouTube', description: 'Vídeos e novidades da Enigmática.', url: 'https://www.youtube.com/@enigmatica-art' },
   { title: 'Discord', description: 'Entre na comunidade.', url: 'https://discord.gg/URapb2bbFA' },
