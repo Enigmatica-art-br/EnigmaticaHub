@@ -1,51 +1,209 @@
-const links = [
-  { title: 'Enigmática Games', description: 'Conheça os jogos da Enigmática.', url: 'https://games.enigmatica.art.br/' },
-  { title: 'Noema — Site', description: 'Conheça o mundo e os mistérios de Noema.', url: 'https://games.enigmatica.art.br/noema/' },
-  { title: 'Noema — Steam', description: 'Página da Steam em preparação.', url: null },
-  { title: 'YouTube', description: 'Vídeos e novidades da Enigmática.', url: 'https://www.youtube.com/@enigmatica-art' },
-  { title: 'Discord', description: 'Entre na comunidade.', url: 'https://discord.gg/URapb2bbFA' },
-  { title: 'Instagram', description: 'Acompanhe a Enigmática.', url: 'https://www.instagram.com/enigmatica.official/' }
+window.I18N = {
+  pt: {
+    'meta.title': 'Enigmática',
+    'meta.description': 'Enigmática — projetos, jogos e canais oficiais.',
+    langGroup: 'Idioma',
+    logoAlt: 'Logo da Enigmática',
+    motto: 'Enigmas são arte.',
+    linksHeading: 'Projetos e canais oficiais',
+    soon: 'Em breve',
+    newTab: '(abre em nova aba)',
+    'games.title': 'Enigmática Games',
+    'games.desc': 'Todos os jogos do estúdio',
+    'noema.title': 'Case 27: Noema',
+    'noema.desc': 'Site oficial do jogo',
+    'steam.desc': 'Loja de Case 27: Noema',
+    'youtube.desc': 'Vídeos e novidades',
+    'discord.desc': 'Entre na comunidade',
+    'instagram.desc': 'Bastidores e anúncios'
+  },
+  en: {
+    'meta.title': 'Enigmática',
+    'meta.description': 'Enigmática — projects, games and official channels.',
+    langGroup: 'Language',
+    logoAlt: 'Enigmática logo',
+    motto: 'Enigmas are art.',
+    linksHeading: 'Projects and official channels',
+    soon: 'Soon',
+    newTab: '(opens in a new tab)',
+    'games.title': 'Enigmática Games',
+    'games.desc': 'Every game from the studio',
+    'noema.title': 'Case 27: Noema',
+    'noema.desc': 'The game’s official website',
+    'steam.desc': 'Case 27: Noema store page',
+    'youtube.desc': 'Videos and news',
+    'discord.desc': 'Join the community',
+    'instagram.desc': 'Behind the scenes and announcements'
+  }
+};
+
+/* tint = cor que a luz de fundo assume quando o link está em foco */
+var LINKS = [
+  { id: 'games', icon: 'cube', url: 'https://games.enigmatica.art.br/', tint: [0.95, 0.62, 0.25] },
+  { id: 'noema', icon: 'eye', url: 'https://games.enigmatica.art.br/noema/', tint: [0.42, 0.62, 0.52] },
+  { id: 'steam', title: 'Steam', icon: 'store', url: null, tint: [0.35, 0.42, 0.55] },
+  { id: 'youtube', title: 'YouTube', icon: 'play', url: 'https://www.youtube.com/@enigmatica-art', tint: [0.86, 0.26, 0.18] },
+  { id: 'discord', title: 'Discord', icon: 'chat', url: 'https://discord.gg/URapb2bbFA', tint: [0.42, 0.40, 0.92] },
+  { id: 'instagram', title: 'Instagram', icon: 'lens', url: 'https://www.instagram.com/enigmatica.official/', tint: [0.88, 0.32, 0.55] }
 ];
 
-const nav = document.querySelector('#project-links');
+var ICONS = {
+  cube: '<path d="M12 2.8 20 7.4v9.2L12 21.2 4 16.6V7.4Z"/><path d="M4 7.4 12 12l8-4.6M12 12v9.2"/>',
+  eye: '<path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12Z"/><circle cx="12" cy="12" r="3.2"/>',
+  store: '<path d="M4 9h16l-1.2 10.5H5.2Z"/><path d="M8.5 9V7a3.5 3.5 0 0 1 7 0v2"/>',
+  play: '<rect x="2.8" y="5.5" width="18.4" height="13" rx="3.6"/><path d="m10.2 9.4 4.6 2.6-4.6 2.6Z" fill="currentColor"/>',
+  chat: '<path d="M4 5.5h16v10.5h-8.5L7 19.5V16H4Z"/><circle cx="9" cy="10.8" r=".9" fill="currentColor"/><circle cx="15" cy="10.8" r=".9" fill="currentColor"/>',
+  lens: '<rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="3.9"/><circle cx="17.1" cy="6.9" r=".8" fill="currentColor"/>'
+};
 
-for (const [index, item] of links.entries()) {
-  const card = document.createElement(item.url ? 'a' : 'div');
-  card.className = 'project-card';
-  card.style.setProperty('--delay', (260 + index * 75) + 'ms');
+var list = document.getElementById('link-list');
 
-  if (item.url) card.href = item.url;
-  else card.setAttribute('aria-disabled', 'true');
-
-  if (item.url && !item.url.includes('enigmatica.art.br')) {
-    card.target = '_blank';
-    card.rel = 'noreferrer';
+LINKS.forEach(function (item) {
+  var li = document.createElement('li');
+  var el = document.createElement(item.url ? 'a' : 'div');
+  el.className = 'link' + (item.url ? '' : ' is-soon');
+  el.dataset.id = item.id;
+  if (item.url) {
+    el.href = item.url;
+    if (!/enigmatica\.art\.br/.test(item.url)) { el.target = '_blank'; el.rel = 'noopener noreferrer'; }
+  } else {
+    el.setAttribute('aria-disabled', 'true');
   }
 
-  const number = document.createElement('span');
-  number.className = 'card-number';
-  number.textContent = String(index + 1).padStart(2, '0');
+  var titleAttr = item.title ? '' : ' data-i18n="' + item.id + '.title"';
+  el.innerHTML =
+    '<svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true">' + ICONS[item.icon] + '</svg>' +
+    '<span class="link-text">' +
+      '<span class="link-title"' + titleAttr + '>' + (item.title || '') + '</span>' +
+      '<span class="link-desc" data-i18n="' + item.id + '.desc"></span>' +
+    '</span>' +
+    (item.url
+      ? '<svg class="link-go" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>' +
+        (el.target ? '<span class="sr-only" data-i18n="newTab"></span>' : '')
+      : '<span class="link-soon" data-i18n="soon"></span>');
 
-  const copy = document.createElement('span');
-  copy.className = 'card-copy';
+  ['pointerenter', 'focus'].forEach(function (ev) {
+    el.addEventListener(ev, function () { Light.tint(item.tint); });
+  });
+  ['pointerleave', 'blur'].forEach(function (ev) {
+    el.addEventListener(ev, function () { Light.tint(null); });
+  });
 
-  const title = document.createElement('span');
-  title.className = 'card-title';
-  title.textContent = item.title;
+  li.appendChild(el);
+  list.appendChild(li);
+});
 
-  const description = document.createElement('span');
-  description.className = 'card-description';
-  description.textContent = item.description;
+document.getElementById('year').textContent = new Date().getFullYear();
+window.EnigmaticaI18n.apply();
 
-  const arrow = document.createElement('span');
-  arrow.className = item.url ? 'card-arrow' : 'card-soon';
-  arrow.textContent = item.url ? '↗' : 'Em breve';
-  arrow.setAttribute('aria-hidden', 'true');
+/* ---------- Cubo: inclina com o ponteiro ---------- */
+(function () {
+  var cube = document.querySelector('[data-cube]');
+  if (!cube || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  window.addEventListener('pointermove', function (e) {
+    var r = cube.getBoundingClientRect();
+    var dx = (e.clientX - (r.left + r.width / 2)) / innerWidth;
+    var dy = (e.clientY - (r.top + r.height / 2)) / innerHeight;
+    cube.style.setProperty('--ry', (dx * 22).toFixed(2) + 'deg');
+    cube.style.setProperty('--rx', (-dy * 22).toFixed(2) + 'deg');
+  }, { passive: true });
+})();
 
-  copy.append(title, description);
-  card.append(number, copy, arrow);
-  nav.append(card);
-}
+/* ---------- Luz de fundo (WebGL) ----------
+ * Um gradiente vivo de âmbar e obsidiana, como a luz que escapa
+ * de dentro do cubo. Ao focar um link, a luz muda de tom.
+ */
+var Light = (function () {
+  var canvas = document.querySelector('.light');
+  var target = [0.95, 0.62, 0.25];
+  var base = target.slice();
+  var tint = target.slice();
+  var api = { tint: function (c) { target = c || base; if (still) draw(performance.now()); } };
+  var gl = canvas && canvas.getContext('webgl', { antialias: false, premultipliedAlpha: false });
+  var still = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!gl) { document.body.classList.add('no-webgl'); return api; }
 
-document.querySelector('#year').textContent = new Date().getFullYear();
-requestAnimationFrame(() => document.body.classList.add('is-ready'));
+  var vs = 'attribute vec2 p;void main(){gl_Position=vec4(p,0.,1.);}';
+  var fs = [
+    'precision mediump float;',
+    'uniform vec2 r;uniform float t;uniform vec3 tint;uniform vec2 focus;',
+    'float h(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}',
+    'float n(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);',
+    ' return mix(mix(h(i),h(i+vec2(1,0)),f.x),mix(h(i+vec2(0,1)),h(i+vec2(1,1)),f.x),f.y);}',
+    'float fbm(vec2 p){float v=0.,a=.5;for(int i=0;i<5;i++){v+=a*n(p);p=p*2.03+vec2(1.7,9.2);a*=.5;}return v;}',
+    'void main(){',
+    ' vec2 uv=gl_FragCoord.xy/r;vec2 q=(gl_FragCoord.xy-.5*r)/r.y;',
+    ' vec2 f=(focus*r-.5*r)/r.y;',
+    ' float s=t*.035;',
+    ' vec2 w=vec2(fbm(q*1.6+s),fbm(q*1.6-s+4.1));',
+    ' float m=fbm(q*1.3+w*1.7+vec2(s*1.4,-s));',
+    ' float d=length(q-f);',
+    ' float k=mix(.5,1.,clamp((r.x/r.y-.5)*1.4,0.,1.));',
+    ' float core=exp(-d*d*6.)*k;',
+    ' float fall=1.-smoothstep(.05,1.35,d);',
+    ' float field=m*1.4+d*.9;',
+    ' float lines=pow(.5+.5*sin(field*18.-s*9.),22.);',
+    ' float silk=smoothstep(.35,.95,fbm(q*.8+w*2.3-s*.6));',
+    ' vec3 obs=vec3(.02,.022,.027);',
+    ' vec3 cold=vec3(.05,.075,.085);',
+    ' vec3 col=mix(obs,cold,silk*.9);',
+    ' col+=tint*core*(.5+.3*m);',
+    ' col+=tint*lines*fall*(.14+.42*core)*k;',
+    ' col+=mix(tint,vec3(.78,.36,.13),.55)*silk*fall*.16;',
+    ' col+=vec3(1.,.88,.66)*pow(core,5.)*.12;',
+    ' col*=1.-.55*smoothstep(.55,1.25,length(uv-.5)*1.6);',
+    ' col+=(h(gl_FragCoord.xy+fract(t))-.5)*.025;',
+    ' gl_FragColor=vec4(col,1.);',
+    '}'
+  ].join('\n');
+
+  function sh(type, src) { var s = gl.createShader(type); gl.shaderSource(s, src); gl.compileShader(s); return s; }
+  var prog = gl.createProgram();
+  gl.attachShader(prog, sh(gl.VERTEX_SHADER, vs));
+  gl.attachShader(prog, sh(gl.FRAGMENT_SHADER, fs));
+  gl.linkProgram(prog);
+  if (!gl.getProgramParameter(prog, gl.LINK_STATUS)) { document.body.classList.add('no-webgl'); return api; }
+  gl.useProgram(prog);
+  gl.bindBuffer(gl.ARRAY_BUFFER, gl.createBuffer());
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 3, -1, -1, 3]), gl.STATIC_DRAW);
+  var loc = gl.getAttribLocation(prog, 'p');
+  gl.enableVertexAttribArray(loc);
+  gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
+  var uR = gl.getUniformLocation(prog, 'r'), uT = gl.getUniformLocation(prog, 't');
+  var uTint = gl.getUniformLocation(prog, 'tint'), uF = gl.getUniformLocation(prog, 'focus');
+
+  var cube = document.querySelector('[data-cube]');
+  var focus = [0.3, 0.5];
+  function resize() {
+    var scale = Math.min(devicePixelRatio || 1, 1.5) * 0.5;
+    canvas.width = Math.round(innerWidth * scale);
+    canvas.height = Math.round(innerHeight * scale);
+    gl.viewport(0, 0, canvas.width, canvas.height);
+    var b = cube.getBoundingClientRect();
+    focus = [(b.left + b.width / 2) / innerWidth, 1 - (b.top + b.height / 2) / innerHeight];
+    if (still) draw(performance.now());
+  }
+
+  function draw(now) {
+    for (var i = 0; i < 3; i++) tint[i] += (target[i] - tint[i]) * (still ? 1 : 0.045);
+    gl.uniform2f(uR, canvas.width, canvas.height);
+    gl.uniform1f(uT, still ? 20 : now / 1000);
+    gl.uniform3f(uTint, tint[0], tint[1], tint[2]);
+    gl.uniform2f(uF, focus[0], focus[1]);
+    gl.drawArrays(gl.TRIANGLES, 0, 3);
+  }
+
+  var raf = 0;
+  function loop(now) { draw(now); raf = requestAnimationFrame(loop); }
+  addEventListener('resize', resize);
+  setTimeout(resize, 1500);
+  document.addEventListener('visibilitychange', function () {
+    if (still) return;
+    cancelAnimationFrame(raf);
+    if (!document.hidden) raf = requestAnimationFrame(loop);
+  });
+  resize();
+  if (still) draw(0); else raf = requestAnimationFrame(loop);
+  document.body.classList.add('has-light');
+  return api;
+})();
