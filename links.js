@@ -37,14 +37,14 @@ window.I18N = {
   }
 };
 
-/* tint = cor que a luz de fundo assume quando o link está em foco */
+/* tint = tom de laranja que a luz assume quando o link está em foco (variações próximas) */
 var LINKS = [
-  { id: 'games', icon: 'cube', url: 'https://games.enigmatica.art.br/', tint: [0.95, 0.62, 0.25] },
-  { id: 'noema', icon: 'eye', url: 'https://games.enigmatica.art.br/noema/', tint: [0.42, 0.62, 0.52] },
-  { id: 'steam', title: 'Steam', icon: 'store', url: null, tint: [0.35, 0.42, 0.55] },
-  { id: 'youtube', title: 'YouTube', icon: 'play', url: 'https://www.youtube.com/@enigmatica-art', tint: [0.86, 0.26, 0.18] },
-  { id: 'discord', title: 'Discord', icon: 'chat', url: 'https://discord.gg/URapb2bbFA', tint: [0.42, 0.40, 0.92] },
-  { id: 'instagram', title: 'Instagram', icon: 'lens', url: 'https://www.instagram.com/enigmatica.official/', tint: [0.88, 0.32, 0.55] }
+  { id: 'games', icon: 'cube', url: 'https://games.enigmatica.art.br/', tint: [0.95, 0.60, 0.24] },
+  { id: 'noema', icon: 'eye', url: 'https://games.enigmatica.art.br/noema/', tint: [1.00, 0.50, 0.17] },
+  { id: 'steam', title: 'Steam', icon: 'store', url: null, tint: [0.86, 0.56, 0.30] },
+  { id: 'youtube', title: 'YouTube', icon: 'play', url: 'https://www.youtube.com/@enigmatica-art', tint: [1.00, 0.42, 0.14] },
+  { id: 'discord', title: 'Discord', icon: 'chat', url: 'https://discord.gg/URapb2bbFA', tint: [0.98, 0.70, 0.34] },
+  { id: 'instagram', title: 'Instagram', icon: 'lens', url: 'https://www.instagram.com/enigmatica.official/', tint: [0.92, 0.47, 0.22] }
 ];
 
 var ICONS = {
