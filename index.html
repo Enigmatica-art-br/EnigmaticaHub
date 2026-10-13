@@ -3,36 +3,38 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0d0f10">
-  <meta name="description" content="Enigmática — projetos, jogos, experiências e canais oficiais.">
+  <meta name="theme-color" content="#171318">
+  <meta name="description" content="Enigmática — projetos, jogos e canais oficiais.">
   <title>Enigmática</title>
-  <link rel="stylesheet" href="styles.css?v=4">
-  <script src="links.js?v=5" defer></script>
+  <link rel="preload" href="assets/enigmatica-logo-fundo.jpg" as="image">
+  <link rel="stylesheet" href="styles.css?v=6">
+  <script src="links.js?v=7" defer></script>
 </head>
 <body>
-  <div class="ambient ambient-one" aria-hidden="true"></div>
-  <div class="ambient ambient-two" aria-hidden="true"></div>
-  <div class="page-shell">
-    <header class="brand-block">
-      <div class="logo-slot reveal">
-        <img src="assets/enigmatica-logo-fundo.jpg" alt="Logo da Enigmática">
-      </div>
-      <div class="brand-copy">
-        <p class="kicker reveal">ENIGMAS SÃO ARTE</p>
-        <h1 class="reveal">Enigmática</h1>
-        <p class="intro reveal">Projetos e canais oficiais.</p>
-      </div>
+  <main class="page-shell">
+    <header class="topline">
+      <span>ENIGMÁTICA</span>
+      <span>PROJETOS E CANAIS OFICIAIS</span>
     </header>
 
-    <main>
-      <nav class="project-nav" aria-label="Links da Enigmática" id="project-links"></nav>
-      <noscript><p class="no-script">Ative o JavaScript para ver os links.</p></noscript>
-    </main>
+    <section class="identity" aria-labelledby="page-title">
+      <div class="logo" aria-hidden="true">
+        <img src="assets/enigmatica-logo-fundo.jpg" alt="">
+      </div>
+      <div class="identity-copy">
+        <p>ENIGMAS SÃO ARTE</p>
+        <h1 id="page-title">Enigmática</h1>
+      </div>
+      <span class="signature">Arthur Nascimento Nogueira</span>
+    </section>
 
-    <footer class="reveal">
-      <span>ENIGMÁTICA © <span id="year">2026</span></span>
-      <span>Arthur Nascimento Nogueira</span>
+    <nav class="link-grid" id="project-links" aria-label="Links da Enigmática"></nav>
+    <noscript><p class="no-script">Ative o JavaScript para ver os links.</p></noscript>
+
+    <footer>
+      <span>© <span id="year">2026</span></span>
+      <span>BRASIL</span>
     </footer>
-  </div>
+  </main>
 </body>
 </html>
