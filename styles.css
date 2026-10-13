@@ -253,3 +253,33 @@ a.link:hover .link-go, a.link:focus-visible .link-go { color: var(--bone); trans
     var(--obsidian);
 }
 .brand-copy { width: 100%; min-width: 0; }
+
+/* canais: botões compactos abaixo dos projetos */
+.socials { margin-top: clamp(6px, 1.1vh, 10px) !important; display: flex !important; flex-wrap: wrap; }
+.socials li { flex: 1 1 calc(33.333% - 10px); min-width: 0; }
+.link.link-social {
+  grid-template-columns: 20px minmax(0, 1fr) auto;
+  gap: 10px;
+  padding: clamp(9px, 1.4vh, 13px) 14px;
+  border-radius: 14px;
+  height: 100%;
+}
+.link-social .link-desc, .link-social .link-go { display: none; }
+.link-social .link-icon { width: 20px; height: 20px; }
+.link-social .link-title { font-size: 15px; }
+.link-social .link-soon { padding: 3px 7px; font-size: 10px; }
+@media (max-width: 420px) {
+  .socials li { flex-basis: calc(50% - 10px); }
+}
+@media (min-width: 861px) {
+  .links ul.socials { display: grid !important; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px; }
+  .link.link-social {
+    grid-template-columns: 1fr; justify-items: center; text-align: center;
+    gap: 6px; padding: 12px 6px 11px;
+  }
+  .link-social .link-title { font-size: 13px; }
+  .link-social .link-soon { border: 0; padding: 0; font-size: 10px; margin-top: -4px; }
+  .link-social.is-soon { opacity: .75; }
+  .link-social { position: relative; }
+  a.link.link-social:hover, a.link.link-social:focus-visible { transform: translateY(-3px); }
+}

@@ -15,7 +15,9 @@ window.I18N = {
     'steam.desc': 'Loja de Case 27: Noema',
     'youtube.desc': 'Vídeos e novidades',
     'discord.desc': 'Entre na comunidade',
-    'instagram.desc': 'Bastidores e anúncios'
+    'instagram.desc': 'Bastidores e anúncios',
+    'reddit.desc': 'Discussões e teorias',
+    'tiktok.desc': 'Vídeos curtos'
   },
   en: {
     'meta.title': 'Enigmática',
@@ -33,7 +35,9 @@ window.I18N = {
     'steam.desc': 'Case 27: Noema store page',
     'youtube.desc': 'Videos and news',
     'discord.desc': 'Join the community',
-    'instagram.desc': 'Behind the scenes and announcements'
+    'instagram.desc': 'Behind the scenes and announcements',
+    'reddit.desc': 'Discussions and theories',
+    'tiktok.desc': 'Short videos'
   }
 };
 
@@ -41,13 +45,17 @@ window.I18N = {
 var LINKS = [
   { id: 'games', icon: 'cube', url: 'https://games.enigmatica.art.br/', tint: [0.95, 0.60, 0.24] },
   { id: 'noema', icon: 'eye', url: 'https://games.enigmatica.art.br/noema/', tint: [1.00, 0.50, 0.17] },
-  { id: 'steam', title: 'Steam', icon: 'store', url: null, tint: [0.86, 0.56, 0.30] },
+  { id: 'steam', title: 'Steam', icon: 'store', url: 'https://store.steampowered.com/app/5361160', tint: [0.86, 0.56, 0.30] },
   { id: 'youtube', title: 'YouTube', icon: 'play', url: 'https://www.youtube.com/@enigmatica-art', tint: [1.00, 0.42, 0.14] },
   { id: 'discord', title: 'Discord', icon: 'chat', url: 'https://discord.gg/URapb2bbFA', tint: [0.98, 0.70, 0.34] },
-  { id: 'instagram', title: 'Instagram', icon: 'lens', url: 'https://www.instagram.com/enigmatica.official/', tint: [0.92, 0.47, 0.22] }
+  { id: 'instagram', title: 'Instagram', icon: 'lens', url: 'https://www.instagram.com/enigmatica.official/', tint: [0.92, 0.47, 0.22] },
+  { id: 'reddit', title: 'Reddit', icon: 'alien', url: 'https://www.reddit.com/user/Enigmatica-Art/', tint: [1.00, 0.55, 0.20] },
+  { id: 'tiktok', title: 'TikTok', icon: 'note', url: null, tint: [0.90, 0.58, 0.28] }
 ];
 
 var ICONS = {
+  alien: '<ellipse cx="12" cy="14.5" rx="8" ry="5.5"/><circle cx="9" cy="14" r=".9" fill="currentColor"/><circle cx="15" cy="14" r=".9" fill="currentColor"/><path d="M9.5 17c1.5.9 3.5.9 5 0M12 9l1.2-5 3.6 1"/><circle cx="18" cy="5" r="1.3"/>',
+  note: '<path d="M13 3v11.5a3.5 3.5 0 1 1-3.5-3.5"/><path d="M13 3c.6 2.6 2.6 4.4 5.5 4.6"/>',
   cube: '<path d="M12 2.8 20 7.4v9.2L12 21.2 4 16.6V7.4Z"/><path d="M4 7.4 12 12l8-4.6M12 12v9.2"/>',
   eye: '<path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12Z"/><circle cx="12" cy="12" r="3.2"/>',
   store: '<path d="M4 9h16l-1.2 10.5H5.2Z"/><path d="M8.5 9V7a3.5 3.5 0 0 1 7 0v2"/>',
@@ -57,6 +65,8 @@ var ICONS = {
 };
 
 var list = document.getElementById('link-list');
+var socialList = document.getElementById('social-list');
+var SOCIAL = { youtube: 1, discord: 1, instagram: 1, reddit: 1, tiktok: 1 };
 
 LINKS.forEach(function (item) {
   var li = document.createElement('li');
@@ -90,7 +100,8 @@ LINKS.forEach(function (item) {
   });
 
   li.appendChild(el);
-  list.appendChild(li);
+  if (SOCIAL[item.id]) { el.classList.add('link-social'); socialList.appendChild(li); }
+  else list.appendChild(li);
 });
 
 document.getElementById('year').textContent = new Date().getFullYear();
