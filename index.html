@@ -3,62 +3,35 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#080908">
-  <meta name="description" content="Enigmática — jogos, experiências e canais oficiais.">
-  <title>Enigmática — Arquivo oficial</title>
-  <link rel="preload" href="assets/enigmatica-logo-fundo.jpg" as="image">
-  <link rel="stylesheet" href="styles.css?v=5">
-  <script src="links.js?v=6" defer></script>
+  <meta name="theme-color" content="#0d0f10">
+  <meta name="description" content="Enigmática — projetos, jogos, experiências e canais oficiais.">
+  <title>Enigmática</title>
+  <link rel="stylesheet" href="styles.css?v=4">
+  <script src="links.js?v=5" defer></script>
 </head>
 <body>
-  <div class="signal-field" aria-hidden="true"><i></i><i></i><i></i></div>
-  <div class="cursor-light" aria-hidden="true"></div>
-
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
   <div class="page-shell">
-    <header class="masthead">
-      <a class="wordmark" href="#inicio" aria-label="Enigmática — início">
-        <span class="wordmark-mark">E</span>
-        <span>ENIGMÁTICA</span>
-      </a>
-      <div class="signal-status"><i></i> TRANSMISSÃO ATIVA</div>
-      <span class="issue">ARQUIVO / 27—26</span>
+    <header class="brand-block">
+      <div class="logo-slot reveal">
+        <img src="assets/enigmatica-logo-fundo.jpg" alt="Logo da Enigmática">
+      </div>
+      <div class="brand-copy">
+        <p class="kicker reveal">ENIGMAS SÃO ARTE</p>
+        <h1 class="reveal">Enigmática</h1>
+        <p class="intro reveal">Projetos e canais oficiais.</p>
+      </div>
     </header>
 
-    <main id="inicio">
-      <section class="hero" aria-labelledby="brand-title">
-        <div class="hero-index" aria-hidden="true">
-          <span>27</span>
-          <small>COLETIVO<br>INDEPENDENTE</small>
-        </div>
-
-        <div class="hero-copy">
-          <p class="eyebrow reveal">ENIGMAS SÃO ARTE</p>
-          <h1 id="brand-title" class="reveal">Não criamos<br><em>respostas.</em></h1>
-          <p class="manifesto reveal">Construímos mundos que continuam pensando depois que você sai deles.</p>
-        </div>
-
-        <a class="artifact reveal" href="https://games.enigmatica.art.br/noema/" aria-label="Abrir Case 27: Noema">
-          <span class="artifact-frame"><img src="assets/enigmatica-logo-fundo.jpg" alt="Símbolo da Enigmática sobre o mundo de Case 27: Noema"></span>
-          <span class="artifact-caption"><b>CASO ATIVO</b> CASE 27: NOEMA <i>↗</i></span>
-        </a>
-
-        <a class="scroll-mark" href="#conexoes">EXPLORAR SINAIS <span>↓</span></a>
-      </section>
-
-      <section class="connections" id="conexoes" aria-labelledby="connections-title">
-        <div class="section-heading">
-          <p>DESTINOS OFICIAIS</p>
-          <h2 id="connections-title">Escolha uma<br>frequência.</h2>
-        </div>
-        <nav class="project-nav" aria-label="Links da Enigmática" id="project-links"></nav>
-        <noscript><p class="no-script">Ative o JavaScript para ver os links.</p></noscript>
-      </section>
+    <main>
+      <nav class="project-nav" aria-label="Links da Enigmática" id="project-links"></nav>
+      <noscript><p class="no-script">Ative o JavaScript para ver os links.</p></noscript>
     </main>
 
-    <footer>
+    <footer class="reveal">
       <span>ENIGMÁTICA © <span id="year">2026</span></span>
       <span>Arthur Nascimento Nogueira</span>
-      <a href="#inicio">VOLTAR AO SINAL ↑</a>
     </footer>
   </div>
 </body>
