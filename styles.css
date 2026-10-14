@@ -308,7 +308,7 @@ a.link:hover .link-go, a.link:focus-visible .link-go { color: var(--bone); trans
   padding-top: calc(var(--inset) + 18px);
   padding-bottom: calc(var(--inset) + 14px);
 }
-@media (min-width: 861px) { .shell { grid-template-columns: minmax(0, 700px) minmax(340px, 500px); justify-content: center; column-gap: clamp(40px, 5vw, 100px); } }
+@media (min-width: 861px) { .shell { grid-template-columns: minmax(0, 840px) minmax(340px, 500px); justify-content: center; column-gap: clamp(60px, 8vw, 170px); } }
 @media (max-width: 860px) {
   :root { --word: min(6.4vh, 10.5vw); }
   .link-social .link-title { font-size: 13.5px; }
