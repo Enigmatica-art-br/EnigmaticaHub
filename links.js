@@ -216,3 +216,22 @@ var Light = (function () {
   document.body.classList.add('has-light');
   return api;
 })();
+
+/* ---------- efeito de clique: anel dourado, losango e faíscas ---------- */
+(function () {
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  document.addEventListener('pointerdown', function (e) {
+    var t = document.createElement('span');
+    t.className = 'tap';
+    t.style.transform = 'translate(' + e.clientX + 'px,' + e.clientY + 'px)';
+    for (var i = 0; i < 6; i++) {
+      var a = (Math.PI * 2 / 6) * i + Math.random() * .5, r = 26 + Math.random() * 14;
+      var sp = document.createElement('i');
+      sp.style.setProperty('--dx', (Math.cos(a) * r).toFixed(1) + 'px');
+      sp.style.setProperty('--dy', (Math.sin(a) * r).toFixed(1) + 'px');
+      t.appendChild(sp);
+    }
+    document.body.appendChild(t);
+    setTimeout(function () { t.remove(); }, 700);
+  }, { passive: true });
+})();

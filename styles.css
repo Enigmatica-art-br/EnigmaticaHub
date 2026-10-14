@@ -299,7 +299,7 @@ a.link:hover .link-go, a.link:focus-visible .link-go { color: var(--bone); trans
   font: 800 var(--word)/.8 'Syne', sans-serif; letter-spacing: -.01em;
   color: transparent; -webkit-text-stroke: 1.2px rgba(233, 180, 80, .38);
   white-space: nowrap; pointer-events: none;
-  animation: rise 1.4s both;
+  animation: fadeIn 1.4s ease both;
 }
 .shell {
   max-width: none;
@@ -308,7 +308,7 @@ a.link:hover .link-go, a.link:focus-visible .link-go { color: var(--bone); trans
   padding-top: calc(var(--inset) + 18px);
   padding-bottom: calc(var(--inset) + 14px);
 }
-@media (min-width: 861px) { .shell { grid-template-columns: minmax(0, 1fr) minmax(340px, 500px); } }
+@media (min-width: 861px) { .shell { grid-template-columns: minmax(0, 700px) minmax(340px, 500px); justify-content: center; column-gap: clamp(40px, 5vw, 100px); } }
 @media (max-width: 860px) {
   :root { --word: min(6.4vh, 10.5vw); }
   .link-social .link-title { font-size: 13.5px; }
@@ -327,3 +327,15 @@ a.link:hover .link-go, a.link:focus-visible .link-go { color: var(--bone); trans
   .shell { padding-left: calc(var(--inset) + 14px); padding-right: calc(var(--inset) + 14px); }
   .foot { flex-direction: column; align-items: center; justify-content: center; gap: 2px; text-align: center; }
 }
+
+@keyframes fadeIn { from { opacity: 0; } }
+
+/* efeito de clique */
+.tap { position: fixed; z-index: 50; left: 0; top: 0; width: 0; height: 0; pointer-events: none; }
+.tap::before, .tap::after { content: ""; position: absolute; left: 0; top: 0; border: 1px solid #e9b450; }
+.tap::before { width: 46px; height: 46px; margin: -23px 0 0 -23px; border-radius: 50%; animation: tapRing .65s cubic-bezier(.2,.7,.2,1) forwards; }
+.tap::after { width: 10px; height: 10px; margin: -5px 0 0 -5px; transform: rotate(45deg); background: rgba(233,180,80,.25); animation: tapGem .65s cubic-bezier(.2,.7,.2,1) forwards; }
+.tap i { position: absolute; left: 0; top: 0; width: 3px; height: 3px; margin: -1.5px; border-radius: 50%; background: #f2c77a; animation: tapSpark .6s cubic-bezier(.2,.7,.2,1) forwards; }
+@keyframes tapRing { from { transform: scale(.2); opacity: .9; } to { transform: scale(1.5); opacity: 0; } }
+@keyframes tapGem { 0% { transform: rotate(45deg) scale(.4); opacity: 1; } 100% { transform: rotate(225deg) scale(1.6); opacity: 0; } }
+@keyframes tapSpark { from { transform: translate(0, 0); opacity: 1; } to { transform: translate(var(--dx), var(--dy)); opacity: 0; } }
