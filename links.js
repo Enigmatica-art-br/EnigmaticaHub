@@ -50,7 +50,7 @@ var LINKS = [
   { id: 'discord', title: 'Discord', icon: 'chat', url: 'https://discord.gg/URapb2bbFA', tint: [0.93, 0.74, 0.32] },
   { id: 'instagram', title: 'Instagram', icon: 'lens', url: 'https://www.instagram.com/enigmatica.official/', tint: [0.91, 0.60, 0.24] },
   { id: 'reddit', title: 'Reddit', icon: 'alien', url: 'https://www.reddit.com/user/Enigmatica-Art/', tint: [0.97, 0.64, 0.23] },
-  { id: 'tiktok', title: 'TikTok', icon: 'note', url: null, tint: [0.90, 0.72, 0.30] }
+  { id: 'tiktok', title: 'TikTok', icon: 'note', url: 'https://www.tiktok.com/@enigmatica_art', tint: [0.90, 0.72, 0.30] }
 ];
 
 var ICONS = {
