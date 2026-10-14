@@ -43,14 +43,14 @@ window.I18N = {
 
 /* tint = tom de laranja que a luz assume quando o link está em foco (variações próximas) */
 var LINKS = [
-  { id: 'games', icon: 'cube', url: 'https://games.enigmatica.art.br/', tint: [0.95, 0.60, 0.24] },
-  { id: 'noema', icon: 'eye', url: 'https://games.enigmatica.art.br/noema/', tint: [1.00, 0.50, 0.17] },
-  { id: 'steam', title: 'Steam', icon: 'store', url: 'https://store.steampowered.com/app/5361160', tint: [0.86, 0.56, 0.30] },
-  { id: 'youtube', title: 'YouTube', icon: 'play', url: 'https://www.youtube.com/@enigmatica-art', tint: [1.00, 0.42, 0.14] },
-  { id: 'discord', title: 'Discord', icon: 'chat', url: 'https://discord.gg/URapb2bbFA', tint: [0.98, 0.70, 0.34] },
-  { id: 'instagram', title: 'Instagram', icon: 'lens', url: 'https://www.instagram.com/enigmatica.official/', tint: [0.92, 0.47, 0.22] },
-  { id: 'reddit', title: 'Reddit', icon: 'alien', url: 'https://www.reddit.com/user/Enigmatica-Art/', tint: [1.00, 0.55, 0.20] },
-  { id: 'tiktok', title: 'TikTok', icon: 'note', url: null, tint: [0.90, 0.58, 0.28] }
+  { id: 'games', icon: 'cube', url: 'https://games.enigmatica.art.br/', tint: [0.95, 0.68, 0.26] },
+  { id: 'noema', icon: 'eye', url: 'https://games.enigmatica.art.br/noema/', tint: [0.98, 0.61, 0.22] },
+  { id: 'steam', title: 'Steam', icon: 'store', url: 'https://store.steampowered.com/app/5361160', tint: [0.89, 0.70, 0.31] },
+  { id: 'youtube', title: 'YouTube', icon: 'play', url: 'https://www.youtube.com/@enigmatica-art', tint: [0.97, 0.58, 0.20] },
+  { id: 'discord', title: 'Discord', icon: 'chat', url: 'https://discord.gg/URapb2bbFA', tint: [0.93, 0.74, 0.32] },
+  { id: 'instagram', title: 'Instagram', icon: 'lens', url: 'https://www.instagram.com/enigmatica.official/', tint: [0.91, 0.60, 0.24] },
+  { id: 'reddit', title: 'Reddit', icon: 'alien', url: 'https://www.reddit.com/user/Enigmatica-Art/', tint: [0.97, 0.64, 0.23] },
+  { id: 'tiktok', title: 'TikTok', icon: 'note', url: null, tint: [0.90, 0.72, 0.30] }
 ];
 
 var ICONS = {
@@ -126,7 +126,7 @@ window.EnigmaticaI18n.apply();
  */
 var Light = (function () {
   var canvas = document.querySelector('.light');
-  var target = [0.95, 0.62, 0.25];
+  var target = [0.95, 0.68, 0.26];
   var base = target.slice();
   var tint = target.slice();
   var api = { tint: function (c) { target = c || base; if (still) draw(performance.now()); } };
@@ -143,26 +143,24 @@ var Light = (function () {
     ' return mix(mix(h(i),h(i+vec2(1,0)),f.x),mix(h(i+vec2(0,1)),h(i+vec2(1,1)),f.x),f.y);}',
     'float fbm(vec2 p){float v=0.,a=.5;for(int i=0;i<5;i++){v+=a*n(p);p=p*2.03+vec2(1.7,9.2);a*=.5;}return v;}',
     'void main(){',
-    ' vec2 uv=gl_FragCoord.xy/r;vec2 q=(gl_FragCoord.xy-.5*r)/r.y;',
-    ' vec2 f=(focus*r-.5*r)/r.y;',
+    ' vec2 uv=gl_FragCoord.xy/r;float S=min(r.x,r.y);vec2 q=(gl_FragCoord.xy-.5*r)/S;',
+    ' vec2 f=(focus*r-.5*r)/S;',
     ' float s=t*.035;',
     ' vec2 w=vec2(fbm(q*1.6+s),fbm(q*1.6-s+4.1));',
     ' float m=fbm(q*1.3+w*1.7+vec2(s*1.4,-s));',
     ' float d=length(q-f);',
-    ' float k=mix(.5,1.,clamp((r.x/r.y-.5)*1.4,0.,1.));',
-    ' float core=exp(-d*d*6.)*k;',
-    ' float fall=1.-smoothstep(.05,1.35,d);',
+    ' float core=exp(-d*d*7.0);',
+    ' float warm=1.-smoothstep(0.12,1.00,d+(m-.5)*.25);',
+    ' float fall=1.-smoothstep(.05,1.6,d);',
     ' float field=m*1.4+d*.9;',
     ' float lines=pow(.5+.5*sin(field*18.-s*9.),22.);',
     ' float silk=smoothstep(.35,.95,fbm(q*.8+w*2.3-s*.6));',
-    ' vec3 obs=vec3(.02,.022,.027);',
-    ' vec3 cold=vec3(.05,.075,.085);',
-    ' vec3 col=mix(obs,cold,silk*.9);',
-    ' col+=tint*core*(.5+.3*m);',
-    ' col+=tint*lines*fall*(.14+.42*core)*k;',
-    ' col+=mix(tint,vec3(.78,.36,.13),.55)*silk*fall*.16;',
-    ' col+=vec3(1.,.88,.66)*pow(core,5.)*.12;',
-    ' col*=1.-.55*smoothstep(.55,1.25,length(uv-.5)*1.6);',
+    ' vec3 col=mix(vec3(0.006,0.012,0.035),vec3(0.020,0.050,0.150),silk*0.90);',
+    ' col+=tint*core*0.42*(.6+.3*m);',
+    ' col+=mix(vec3(0.220,0.340,0.700),tint,warm)*lines*fall*(.12+.4*warm);',
+    ' col+=mix(vec3(0.100,0.200,0.550),mix(tint,vec3(0.620,0.380,0.100),.55),warm)*silk*fall*.16;',
+    ' col+=vec3(0.900,0.740,0.500)*pow(core,5.)*.14;',
+    ' col*=1.-.6*smoothstep(.55,1.25,length(uv-.5)*1.6);',
     ' col+=(h(gl_FragCoord.xy+fract(t))-.5)*.025;',
     ' gl_FragColor=vec4(col,1.);',
     '}'
