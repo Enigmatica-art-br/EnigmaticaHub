@@ -339,3 +339,4 @@ a.link:hover .link-go, a.link:focus-visible .link-go { color: var(--bone); trans
 @keyframes tapRing { from { transform: scale(.2); opacity: .9; } to { transform: scale(1.5); opacity: 0; } }
 @keyframes tapGem { 0% { transform: rotate(45deg) scale(.4); opacity: 1; } 100% { transform: rotate(225deg) scale(1.6); opacity: 0; } }
 @keyframes tapSpark { from { transform: translate(0, 0); opacity: 1; } to { transform: translate(var(--dx), var(--dy)); opacity: 0; } }
+@media (min-width: 861px) { .brand { margin-left: calc(-1 * clamp(20px, (100vw - 1200px) / 5, 120px)); } }
