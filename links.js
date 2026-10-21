@@ -1,109 +1,117 @@
 window.I18N = {
   pt: {
     'meta.title': 'Enigmática',
-    'meta.description': 'Enigmática — jogos, projetos e canais oficiais.',
+    'meta.description': 'Enigmática — projetos, jogos e canais oficiais.',
     langGroup: 'Idioma',
-    navLabel: 'Seções',
-    'nav.games': 'Jogos',
-    'nav.trailer': 'Trailer',
-    'nav.community': 'Comunidade',
     logoAlt: 'Logo da Enigmática',
     motto: 'Enigmas são arte.',
     linksHeading: 'Projetos e canais oficiais',
-    scrollCue: 'Descer para os jogos',
+    soon: 'Em breve',
     newTab: '(abre em nova aba)',
+    'games.title': 'Enigmática Games',
+    'games.desc': 'Todos os jogos do estúdio',
+    'noema.title': 'Case 27: Noema',
     'noema.desc': 'Site oficial do jogo',
-    'blackdiamond.desc': 'ARG no navegador',
     'steam.desc': 'Loja de Case 27: Noema',
     'youtube.desc': 'Vídeos e novidades',
     'discord.desc': 'Entre na comunidade',
     'instagram.desc': 'Bastidores e anúncios',
     'reddit.desc': 'Discussões e teorias',
-    'tiktok.desc': 'Vídeos curtos',
-    'games.title': 'Jogos',
-    'noema.status': 'Em desenvolvimento',
-    'noema.kind': 'Investigação em primeira pessoa · PC',
-    'noema.text': 'Uma ilha construída sobre segredos e uma linguagem que nunca explica as próprias regras.',
-    'noema.site': 'Site oficial',
-    'noema.alt': 'Fortaleza de pedra cercada por floresta e caminhos.',
-    'bd.kind': 'ARG · No navegador',
-    'bd.quote': 'Uma porta. Dois caminhos. O que você sabe define a rota.',
-    'bd.text': 'Enigmas em inglês, jogados direto no navegador. Para entrar, você precisa da senha.',
-    'bd.site': 'Entrar no site',
-    'bd.alt': 'O site do Black Diamond: o título sobre um céu noturno, um diamante negro e o campo de senha.',
-    'trailer.title': 'Trailer',
-    'community.title': 'Comunidade'
+    'tiktok.desc': 'Vídeos curtos'
   },
   en: {
     'meta.title': 'Enigmática',
-    'meta.description': 'Enigmática — games, projects and official channels.',
+    'meta.description': 'Enigmática — projects, games and official channels.',
     langGroup: 'Language',
-    navLabel: 'Sections',
-    'nav.games': 'Games',
-    'nav.trailer': 'Trailer',
-    'nav.community': 'Community',
     logoAlt: 'Enigmática logo',
     motto: 'Enigmas are art.',
     linksHeading: 'Projects and official channels',
-    scrollCue: 'Scroll to the games',
+    soon: 'Soon',
     newTab: '(opens in a new tab)',
+    'games.title': 'Enigmática Games',
+    'games.desc': 'Every game from the studio',
+    'noema.title': 'Case 27: Noema',
     'noema.desc': 'The game’s official website',
-    'blackdiamond.desc': 'ARG in the browser',
     'steam.desc': 'Case 27: Noema store page',
     'youtube.desc': 'Videos and news',
     'discord.desc': 'Join the community',
     'instagram.desc': 'Behind the scenes and announcements',
     'reddit.desc': 'Discussions and theories',
-    'tiktok.desc': 'Short videos',
-    'games.title': 'Games',
-    'noema.status': 'In development',
-    'noema.kind': 'First-person investigation · PC',
-    'noema.text': 'An island built on secrets and a language that never explains its own rules.',
-    'noema.site': 'Official website',
-    'noema.alt': 'A stone fortress surrounded by forest and paths.',
-    'bd.kind': 'ARG · In the browser',
-    'bd.quote': 'One door. Two paths. What you know defines the route.',
-    'bd.text': 'Puzzles in English, played straight in the browser. You need the password to get in.',
-    'bd.site': 'Enter the site',
-    'bd.alt': 'The Black Diamond website: the title over a night sky, a black diamond and the password field.',
-    'trailer.title': 'Trailer',
-    'community.title': 'Community'
+    'tiktok.desc': 'Short videos'
   }
 };
+
+/* tint = tom de laranja que a luz assume quando o link está em foco (variações próximas) */
+var LINKS = [
+  { id: 'games', icon: 'cube', url: 'https://games.enigmatica.art.br/', tint: [0.95, 0.68, 0.26] },
+  { id: 'noema', icon: 'eye', url: 'https://games.enigmatica.art.br/noema/', tint: [0.98, 0.61, 0.22] },
+  { id: 'steam', title: 'Steam', icon: 'store', url: 'https://store.steampowered.com/app/5361160', tint: [0.89, 0.70, 0.31] },
+  { id: 'youtube', title: 'YouTube', icon: 'play', url: 'https://www.youtube.com/@enigmatica-art', tint: [0.97, 0.58, 0.20] },
+  { id: 'discord', title: 'Discord', icon: 'chat', url: 'https://discord.gg/URapb2bbFA', tint: [0.93, 0.74, 0.32] },
+  { id: 'instagram', title: 'Instagram', icon: 'lens', url: 'https://www.instagram.com/enigmatica.official/', tint: [0.91, 0.60, 0.24] },
+  { id: 'reddit', title: 'Reddit', icon: 'alien', url: 'https://www.reddit.com/user/Enigmatica-Art/', tint: [0.97, 0.64, 0.23] },
+  { id: 'tiktok', title: 'TikTok', icon: 'note', url: 'https://www.tiktok.com/@enigmatica_art', tint: [0.90, 0.72, 0.30] }
+];
+
+var ICONS = {
+  alien: '<ellipse cx="12" cy="14.5" rx="8" ry="5.5"/><circle cx="9" cy="14" r=".9" fill="currentColor"/><circle cx="15" cy="14" r=".9" fill="currentColor"/><path d="M9.5 17c1.5.9 3.5.9 5 0M12 9l1.2-5 3.6 1"/><circle cx="18" cy="5" r="1.3"/>',
+  note: '<path d="M13 3v11.5a3.5 3.5 0 1 1-3.5-3.5"/><path d="M13 3c.6 2.6 2.6 4.4 5.5 4.6"/>',
+  cube: '<path d="M12 2.8 20 7.4v9.2L12 21.2 4 16.6V7.4Z"/><path d="M4 7.4 12 12l8-4.6M12 12v9.2"/>',
+  eye: '<path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12Z"/><circle cx="12" cy="12" r="3.2"/>',
+  store: '<path d="M4 9h16l-1.2 10.5H5.2Z"/><path d="M8.5 9V7a3.5 3.5 0 0 1 7 0v2"/>',
+  play: '<rect x="2.8" y="5.5" width="18.4" height="13" rx="3.6"/><path d="m10.2 9.4 4.6 2.6-4.6 2.6Z" fill="currentColor"/>',
+  chat: '<path d="M4 5.5h16v10.5h-8.5L7 19.5V16H4Z"/><circle cx="9" cy="10.8" r=".9" fill="currentColor"/><circle cx="15" cy="10.8" r=".9" fill="currentColor"/>',
+  lens: '<rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="3.9"/><circle cx="17.1" cy="6.9" r=".8" fill="currentColor"/>'
+};
+
+var list = document.getElementById('link-list');
+var socialList = document.getElementById('social-list');
+var SOCIAL = { youtube: 1, discord: 1, instagram: 1, reddit: 1, tiktok: 1 };
+
+LINKS.forEach(function (item) {
+  var li = document.createElement('li');
+  var el = document.createElement(item.url ? 'a' : 'div');
+  el.className = 'link' + (item.url ? '' : ' is-soon');
+  el.dataset.id = item.id;
+  if (item.url) {
+    el.href = item.url;
+    if (!/enigmatica\.art\.br/.test(item.url)) { el.target = '_blank'; el.rel = 'noopener noreferrer'; }
+  } else {
+    el.setAttribute('aria-disabled', 'true');
+  }
+
+  var titleAttr = item.title ? '' : ' data-i18n="' + item.id + '.title"';
+  el.innerHTML =
+    '<svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true">' + ICONS[item.icon] + '</svg>' +
+    '<span class="link-text">' +
+      '<span class="link-title"' + titleAttr + '>' + (item.title || '') + '</span>' +
+      '<span class="link-desc" data-i18n="' + item.id + '.desc"></span>' +
+    '</span>' +
+    (item.url
+      ? '<svg class="link-go" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>' +
+        (el.target ? '<span class="sr-only" data-i18n="newTab"></span>' : '')
+      : '<span class="link-soon" data-i18n="soon"></span>');
+
+  ['pointerenter', 'focus'].forEach(function (ev) {
+    el.addEventListener(ev, function () { Light.tint(item.tint); });
+  });
+  ['pointerleave', 'blur'].forEach(function (ev) {
+    el.addEventListener(ev, function () { Light.tint(null); });
+  });
+
+  li.appendChild(el);
+  if (SOCIAL[item.id]) { el.classList.add('link-social'); socialList.appendChild(li); }
+  else list.appendChild(li);
+});
 
 document.getElementById('year').textContent = new Date().getFullYear();
 window.EnigmaticaI18n.apply();
 
-var still = matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-/* ---------- clicar várias vezes não seleciona texto; arrastar continua selecionando ---------- */
-document.addEventListener('mousedown', function (e) {
-  if (e.detail > 1 && !e.target.closest('input, textarea, [contenteditable]')) e.preventDefault();
-});
-
-/* ---------- cabeçalho aparece ao descer ---------- */
-(function () {
-  var head = document.querySelector('[data-head]');
-  var tick = function () { head.classList.toggle('is-scrolled', scrollY > 40); };
-  tick();
-  addEventListener('scroll', tick, { passive: true });
-})();
-
-/* ---------- entradas ao rolar ---------- */
-(function () {
-  var els = document.querySelectorAll('.reveal');
-  if (!('IntersectionObserver' in window) || still) { els.forEach(function (el) { el.classList.add('is-in'); }); return; }
-  var io = new IntersectionObserver(function (entries) {
-    entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); } });
-  }, { threshold: 0.12 });
-  els.forEach(function (el) { io.observe(el); });
-})();
-
-/* ---------- cubo: inclina com o ponteiro ---------- */
+/* ---------- Cubo: inclina com o ponteiro ---------- */
 (function () {
   var cube = document.querySelector('[data-cube]');
-  if (!cube || still) return;
-  addEventListener('pointermove', function (e) {
+  if (!cube || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  window.addEventListener('pointermove', function (e) {
     var r = cube.getBoundingClientRect();
     var dx = (e.clientX - (r.left + r.width / 2)) / innerWidth;
     var dy = (e.clientY - (r.top + r.height / 2)) / innerHeight;
@@ -112,13 +120,18 @@ document.addEventListener('mousedown', function (e) {
   }, { passive: true });
 })();
 
-/* ---------- luz de fundo (WebGL): azul profundo com fios dourados ---------- */
+/* ---------- Luz de fundo (WebGL) ----------
+ * Um gradiente vivo de âmbar e obsidiana, como a luz que escapa
+ * de dentro do cubo. Ao focar um link, a luz muda de tom.
+ */
 var Light = (function () {
   var canvas = document.querySelector('.light');
-  var base = [0.95, 0.68, 0.26];
-  var target = base, tint = base.slice();
-  var api = { tint: function () {} };
+  var target = [0.95, 0.68, 0.26];
+  var base = target.slice();
+  var tint = target.slice();
+  var api = { tint: function (c) { target = c || base; if (still) draw(performance.now()); } };
   var gl = canvas && canvas.getContext('webgl', { antialias: false, premultipliedAlpha: false });
+  var still = matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (!gl) { document.body.classList.add('no-webgl'); return api; }
 
   var vs = 'attribute vec2 p;void main(){gl_Position=vec4(p,0.,1.);}';
@@ -168,36 +181,30 @@ var Light = (function () {
   var uR = gl.getUniformLocation(prog, 'r'), uT = gl.getUniformLocation(prog, 't');
   var uTint = gl.getUniformLocation(prog, 'tint'), uF = gl.getUniformLocation(prog, 'focus');
 
-  /* a luz nasce no cubo; ao descer a página ela sobe e fica no alto da tela */
   var cube = document.querySelector('[data-cube]');
-  var focus = [0.3, 0.5], aim = focus.slice();
-  function measure() {
+  var focus = [0.3, 0.5];
+  function resize() {
+    var scale = Math.min(devicePixelRatio || 1, 1.5) * 0.5;
+    canvas.width = Math.round(innerWidth * scale);
+    canvas.height = Math.round(innerHeight * scale);
+    gl.viewport(0, 0, canvas.width, canvas.height);
     var b = cube.getBoundingClientRect();
-    var y = 1 - (b.top + b.height / 2) / innerHeight;
-    aim = [(b.left + b.width / 2) / innerWidth, Math.min(y, 0.9)];
+    focus = [(b.left + b.width / 2) / innerWidth, 1 - (b.top + b.height / 2) / innerHeight];
+    if (still) draw(performance.now());
   }
+
   function draw(now) {
-    var e = still ? 1 : 0.05;
-    for (var i = 0; i < 3; i++) tint[i] += (target[i] - tint[i]) * e;
-    focus[0] += (aim[0] - focus[0]) * e; focus[1] += (aim[1] - focus[1]) * e;
+    for (var i = 0; i < 3; i++) tint[i] += (target[i] - tint[i]) * (still ? 1 : 0.045);
     gl.uniform2f(uR, canvas.width, canvas.height);
     gl.uniform1f(uT, still ? 20 : now / 1000);
     gl.uniform3f(uTint, tint[0], tint[1], tint[2]);
     gl.uniform2f(uF, focus[0], focus[1]);
     gl.drawArrays(gl.TRIANGLES, 0, 3);
   }
-  function resize() {
-    var k = Math.min(devicePixelRatio || 1, 1.5) * 0.5;
-    canvas.width = Math.round(innerWidth * k);
-    canvas.height = Math.round(innerHeight * k);
-    gl.viewport(0, 0, canvas.width, canvas.height);
-    measure();
-    if (still) draw(0);
-  }
+
   var raf = 0;
   function loop(now) { draw(now); raf = requestAnimationFrame(loop); }
   addEventListener('resize', resize);
-  addEventListener('scroll', function () { measure(); if (still) draw(0); }, { passive: true });
   setTimeout(resize, 1500);
   document.addEventListener('visibilitychange', function () {
     if (still) return;
@@ -205,23 +212,14 @@ var Light = (function () {
     if (!document.hidden) raf = requestAnimationFrame(loop);
   });
   resize();
-  focus = aim.slice();
   if (still) draw(0); else raf = requestAnimationFrame(loop);
   document.body.classList.add('has-light');
-  api.tint = function (c) { target = c || base; if (still) draw(0); };
   return api;
 })();
 
-/* cada link muda o tom da luz quando está em foco */
-document.querySelectorAll('[data-tint]').forEach(function (el) {
-  var c = el.getAttribute('data-tint').split(',').map(Number);
-  ['pointerenter', 'focusin'].forEach(function (ev) { el.addEventListener(ev, function () { Light.tint(c); }); });
-  ['pointerleave', 'focusout'].forEach(function (ev) { el.addEventListener(ev, function () { Light.tint(null); }); });
-});
-
 /* ---------- efeito de clique: anel dourado, losango e faíscas ---------- */
 (function () {
-  if (still) return;
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   document.addEventListener('pointerdown', function (e) {
     var t = document.createElement('span');
     t.className = 'tap';
