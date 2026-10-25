@@ -15,13 +15,13 @@ window.I18N = {
     'trailer.play': 'Assistir ao trailer',
     'trailer.label': 'Trailer oficial',
     'noema.status': 'Em desenvolvimento para PC',
-    'noema.text': 'Uma investigação em primeira pessoa numa ilha construída sobre segredos, com uma linguagem que nunca explica as próprias regras.',
+    'noema.text': 'Uma investigação em primeira pessoa numa ilha construída sobre segredos e enigmas, com linguagens para decifrar e uma narrativa metafórica e filosófica.',
     'noema.site': 'Site oficial',
     'bd.status': 'ARG em desenvolvimento · 2027',
     'bd.text': 'Um ARG difícil, inspirado em Notpron, jogado direto no navegador. Lançamento oficial em 2027.',
     'bd.enter': 'Visitar o site',
-    'about.title': 'Estúdio de uma pessoa só',
-    'about.text': 'A Enigmática é o estúdio de Arthur Nascimento Nogueira. Cada jogo é pensado para desafiar quem joga: observar, ligar as pistas e chegar à resposta sozinho.'
+    'about.title': 'Enigmática',
+    'about.text': 'A Enigmática foi criada por Arthur Nascimento Nogueira para desenvolver e publicar experiências de mistério e enigmas.'
   },
   en: {
     'meta.title': 'Enigmática',
@@ -39,13 +39,13 @@ window.I18N = {
     'trailer.play': 'Play the trailer',
     'trailer.label': 'Official trailer',
     'noema.status': 'In development for PC',
-    'noema.text': 'A first-person investigation on an island built on secrets, and a language that never explains its own rules.',
+    'noema.text': 'A first-person investigation on an island built on secrets and puzzles, with languages to decipher and a metaphorical, philosophical narrative.',
     'noema.site': 'Official site',
     'bd.status': 'ARG in development · 2027',
     'bd.text': 'A hard ARG inspired by Notpron, played right in the browser. Officially launching in 2027.',
     'bd.enter': 'Visit the site',
-    'about.title': 'A one-dev studio',
-    'about.text': 'Enigmática is the studio of Arthur Nascimento Nogueira. Every game is built to challenge the player: observe, connect the clues and reach the answer on your own.'
+    'about.title': 'Enigmática',
+    'about.text': 'Arthur Nascimento Nogueira created Enigmática to develop and publish experiences built around mystery and puzzles.'
   }
 };
 
