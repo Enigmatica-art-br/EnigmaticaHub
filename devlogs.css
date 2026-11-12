@@ -15,7 +15,7 @@
 .reading-close{position:absolute;top:12px;right:12px;margin:0;float:none;display:grid;place-items:center;padding:0;transform:none;translate:none;rotate:none;line-height:1}
 .reading-close svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round}
 .reading-banner{height:auto;max-height:48svh;object-fit:contain;background:#05070a}
-.privacy-page .bg{background-image:url('assets/img/privacy-bg.jpg')}
+.privacy-page .bg{background-image:url('assets/img/privacy-scene.png')}
 @media(max-width:1000px){.featured-row>.devlog-card{flex-basis:calc((100% - 36px)/3)}}
 @media(max-width:640px){.featured-row>.devlog-card{flex-basis:calc((100% - 18px)/2)}.devlog-dialog{max-height:94svh}.reading-scroll{max-height:calc(94svh - 2px)}.reading-banner{max-height:36svh}}
 
