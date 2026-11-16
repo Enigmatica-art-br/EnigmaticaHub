@@ -5,14 +5,14 @@
       "id": "devlog-mwj1pulz-10e240",
       "type": "news",
       "status": "published",
-      "publishedAt": "2026-11-16T09:13:00.000Z",
+      "publishedAt": "2026-10-27T09:13:00.000Z",
       "showInBanner": true,
       "isRelevant": true,
       "banner": "assets/devlogs/8cefddc2e43c70e33d3c6431bba0afd7.png",
       "cover": "assets/devlogs/e43f536cec03020334f4c4dd4cbbd08f.png",
       "translations": {
         "pt": {
-          "title": "Discover Enigmática’s new channel",
+          "title": "#1 | Discover Enigmática’s new channel",
           "summary": "A Enigmática amplia sua presença no YouTube com um canal dedicado a reações, destaques de transmissões e outros conteúdos sobre seus jogos.",
           "blocks": [
             {
@@ -59,9 +59,10 @@
         }
       },
       "createdAt": "2026-11-16T10:23:10.021Z",
-      "updatedAt": "2026-11-16T13:10:30.944Z",
-      "revision": "3cebbc1b-6e00-433f-8ef2-e123c4b6276b",
-      "bannerLink": ""
+      "updatedAt": "2026-11-16T13:49:44.615Z",
+      "revision": "791b0ed0-b52d-4f1a-8d82-dc0b00264e91",
+      "bannerLink": "",
+      "hideBannerContent": false
     }
   ]
 }
