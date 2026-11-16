@@ -42,7 +42,7 @@
               "type": "youtube-channel",
               "mediaKey": "3d56cce7-1c46-479e-9937-acd8bec7d734",
               "src": "https://www.youtube.com/@Enigm%C3%A1tica-guy",
-              "alt": "",
+              "alt": "Enigmática Guy",
               "thumbnail": "https://yt3.googleusercontent.com/qHs-icbsTfepp3nzss17ukwajDAGSe5ZKyqlvgryH9ib1YeDbSOeRkT0BYbIVtxi8DdHNKmN=s900-c-k-c0x00ffffff-no-rj"
             },
             {
@@ -59,8 +59,9 @@
         }
       },
       "createdAt": "2026-11-16T10:23:10.021Z",
-      "updatedAt": "2026-11-16T11:49:17.012Z",
-      "revision": "becb10f5-6005-4902-ab4b-db54ebcf7ce0"
+      "updatedAt": "2026-11-16T13:10:30.944Z",
+      "revision": "3cebbc1b-6e00-433f-8ef2-e123c4b6276b",
+      "bannerLink": ""
     }
   ]
 }
