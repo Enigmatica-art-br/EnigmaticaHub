@@ -7,7 +7,7 @@
       "status": "published",
       "publishedAt": "2026-11-16T09:13:00.000Z",
       "showInBanner": true,
-      "isRelevant": false,
+      "isRelevant": true,
       "banner": "assets/devlogs/60911f1e8d7ceeb9e793337a5bce7ada.png",
       "cover": "assets/devlogs/e43f536cec03020334f4c4dd4cbbd08f.png",
       "translations": {
@@ -45,8 +45,8 @@
         }
       },
       "createdAt": "2026-11-16T10:23:10.021Z",
-      "updatedAt": "2026-11-16T10:23:10.021Z",
-      "revision": "a2b2fed7-ddbd-4d49-921a-ef527656ac89"
+      "updatedAt": "2026-11-16T10:23:18.135Z",
+      "revision": "2958f367-cd95-4cfd-ad08-c96bee99db7a"
     }
   ]
 }
