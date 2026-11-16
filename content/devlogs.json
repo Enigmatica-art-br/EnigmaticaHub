@@ -8,7 +8,7 @@
       "publishedAt": "2026-11-16T09:13:00.000Z",
       "showInBanner": true,
       "isRelevant": true,
-      "banner": "assets/devlogs/0942060852be64ea30bd16d6abba3578.png",
+      "banner": "assets/devlogs/8cefddc2e43c70e33d3c6431bba0afd7.png",
       "cover": "assets/devlogs/e43f536cec03020334f4c4dd4cbbd08f.png",
       "translations": {
         "pt": {
@@ -16,18 +16,21 @@
           "summary": "A Enigmática amplia sua presença no YouTube com um canal dedicado a reações, destaques de transmissões e outros conteúdos sobre seus jogos.",
           "blocks": [
             {
+              "type": "youtube-channel",
+              "mediaKey": "3d56cce7-1c46-479e-9937-acd8bec7d734",
+              "src": "https://www.youtube.com/@Enigm%C3%A1tica-guy",
+              "alt": "Enigmática Guy",
+              "thumbnail": "https://yt3.googleusercontent.com/qHs-icbsTfepp3nzss17ukwajDAGSe5ZKyqlvgryH9ib1YeDbSOeRkT0BYbIVtxi8DdHNKmN=s900-c-k-c0x00ffffff-no-rj"
+            },
+            {
               "type": "richtext",
-              "html": "<p><b>Enigmática Guy</b> é um novo canal voltado à publicação de conteúdos complementares relacionados à Enigmática e aos seus jogos. Entre suas publicações estarão reações de criadores de conteúdo, destaques de transmissões ao vivo e outros vídeos relacionados aos projetos do estúdio.</p><p>https://www.youtube.com/@Enigm%C3%A1tica-guy/</p><p>A proposta é facilitar o acesso a materiais que originalmente fazem parte de vídeos ou transmissões mais extensas, reunindo registros da recepção dos jogos pela comunidade ao longo de seu desenvolvimento.</p><p>O canal principal da <b>Enigmática</b> continuará dedicado aos trailers, anúncios e demais materiais oficiais de apresentação dos jogos.</p><p>Embora as primeiras publicações estejam relacionadas a <i>Case 27: Noema</i>, o <b>Enigmática Gu</b>y também acompanhará os futuros projetos do estúdio.</p><p></p>"
+              "html": "<p><b>Enigmática Guy</b> é um novo canal voltado à publicação de conteúdos complementares relacionados à Enigmática e aos seus jogos. Entre suas publicações estarão reações de criadores de conteúdo, destaques de transmissões ao vivo e outros vídeos relacionados aos projetos do estúdio.</p><br><p>A proposta é facilitar o acesso a materiais que originalmente fazem parte de vídeos ou transmissões mais extensas, reunindo registros da recepção dos jogos pela comunidade ao longo de seu desenvolvimento.</p><p>O canal principal da <b>Enigmática</b> continuará dedicado aos trailers, anúncios e demais materiais oficiais de apresentação dos jogos.</p><p>Embora as primeiras publicações estejam relacionadas a <i>Case 27: Noema</i>, o <b>Enigmática Gu</b>y também acompanhará os futuros projetos do estúdio.</p><p></p>"
             },
             {
               "type": "video",
               "mediaKey": "e6aaec81-d662-4ad8-97f1-70b7192d46e1",
               "src": "https://www.youtube.com/watch?v=DP8mxjG08yw&t=7s",
               "alt": "Um exemplo desse formato é a reação do streamer brasileiro Grifo ao trailer de Case 27: Noema, disponível no novo canal."
-            },
-            {
-              "type": "richtext",
-              "html": "<p></p>"
             }
           ]
         },
@@ -44,13 +47,20 @@
               "mediaKey": "e6aaec81-d662-4ad8-97f1-70b7192d46e1",
               "src": "https://www.youtube.com/watch?v=DP8mxjG08yw&t=7s",
               "alt": "An example of this format is Brazilian streamer Grifo's reaction to the Case 27: Noema trailer, available on the new channel."
+            },
+            {
+              "type": "youtube-channel",
+              "mediaKey": "3d56cce7-1c46-479e-9937-acd8bec7d734",
+              "src": "https://www.youtube.com/@Enigm%C3%A1tica-guy",
+              "alt": "",
+              "thumbnail": "https://yt3.googleusercontent.com/qHs-icbsTfepp3nzss17ukwajDAGSe5ZKyqlvgryH9ib1YeDbSOeRkT0BYbIVtxi8DdHNKmN=s900-c-k-c0x00ffffff-no-rj"
             }
           ]
         }
       },
       "createdAt": "2026-11-16T10:23:10.021Z",
-      "updatedAt": "2026-11-16T10:29:54.960Z",
-      "revision": "8af79444-0871-4a01-bde2-515404859e63"
+      "updatedAt": "2026-11-16T11:26:44.326Z",
+      "revision": "70bf0c83-1ab6-4de2-98dd-23117261e100"
     }
   ]
 }
