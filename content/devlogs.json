@@ -24,7 +24,7 @@
             },
             {
               "type": "richtext",
-              "html": "<p><b>Enigmática Guy</b> é um novo canal voltado à publicação de conteúdos complementares relacionados à Enigmática e aos seus jogos. Entre suas publicações estarão reações de criadores de conteúdo, destaques de transmissões ao vivo e outros vídeos relacionados aos projetos do estúdio.</p><br><p>A proposta é facilitar o acesso a materiais que originalmente fazem parte de vídeos ou transmissões mais extensas, reunindo registros da recepção dos jogos pela comunidade ao longo de seu desenvolvimento.</p><p>O canal principal da <b>Enigmática</b> continuará dedicado aos trailers, anúncios e demais materiais oficiais de apresentação dos jogos.</p><p>Embora as primeiras publicações estejam relacionadas a <i>Case 27: Noema</i>, o <b>Enigmática Gu</b>y também acompanhará os futuros projetos do estúdio.</p><p></p>"
+              "html": "<p><b>Enigmática Guy</b> é um novo canal voltado à publicação de conteúdos complementares relacionados à Enigmática e aos seus jogos. Entre suas publicações estarão reações de criadores de conteúdo, destaques de transmissões ao vivo e outros vídeos relacionados aos projetos do estúdio.</p><p>A proposta é facilitar o acesso a materiais que originalmente fazem parte de vídeos ou transmissões mais extensas, reunindo registros da recepção dos jogos pela comunidade ao longo de seu desenvolvimento.</p><p>O canal principal da <b>Enigmática</b> continuará dedicado aos trailers, anúncios e demais materiais oficiais de apresentação dos jogos.</p><p>Embora as primeiras publicações estejam relacionadas a <i>Case 27: Noema</i>, o <b>Enigmática Gu</b>y também acompanhará os futuros projetos do estúdio.</p><p></p>"
             },
             {
               "type": "video",
@@ -40,7 +40,7 @@
           "blocks": [
             {
               "type": "richtext",
-              "html": "<b>Enigmática Guy</b> is a new channel dedicated to supplementary content related to Enigmática and its games. It will feature content creator reactions, livestream highlights, and other videos related to the studio's projects.<p></p><p>https://www.youtube.com/@Enigm%C3%A1tica-guy</p><p>The purpose of the channel is to make material originally featured in longer videos or broadcasts more accessible, documenting the community's reception of the games throughout their development.</p><p>Enigmática's main channel will remain dedicated to trailers, announcements, and other official promotional material.</p><p>Although its initial publications will focus on <i>Case 27: Noema</i>, <b>Enigmática Guy</b> will also cover the studio's future projects.</p>"
+              "html": "<p><b>Enigmática Guy</b> is a new channel dedicated to supplementary content related to Enigmática and its games. It will feature content creator reactions, livestream highlights, and other videos related to the studio's projects.&nbsp;</p><p></p><p></p><p>The purpose of the channel is to make material originally featured in longer videos or broadcasts more accessible, documenting the community's reception of the games throughout their development.</p><p>Enigmática's main channel will remain dedicated to trailers, announcements, and other official promotional material.</p><p>Although its initial publications will focus on <i>Case 27: Noema</i>, <b>Enigmática Guy</b> will also cover the studio's future projects.</p><p></p><p></p>"
             },
             {
               "type": "video",
@@ -59,8 +59,8 @@
         }
       },
       "createdAt": "2026-11-16T10:23:10.021Z",
-      "updatedAt": "2026-11-16T11:26:44.326Z",
-      "revision": "70bf0c83-1ab6-4de2-98dd-23117261e100"
+      "updatedAt": "2026-11-16T11:29:21.419Z",
+      "revision": "c0c5fae2-52a2-4599-86ae-a85e30f61c3d"
     }
   ]
 }
