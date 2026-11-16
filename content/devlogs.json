@@ -39,6 +39,13 @@
           "summary": "Enigmática expands its YouTube presence with a channel dedicated to creator reactions, livestream highlights, and other game-related content.",
           "blocks": [
             {
+              "type": "youtube-channel",
+              "mediaKey": "3d56cce7-1c46-479e-9937-acd8bec7d734",
+              "src": "https://www.youtube.com/@Enigm%C3%A1tica-guy",
+              "alt": "",
+              "thumbnail": "https://yt3.googleusercontent.com/qHs-icbsTfepp3nzss17ukwajDAGSe5ZKyqlvgryH9ib1YeDbSOeRkT0BYbIVtxi8DdHNKmN=s900-c-k-c0x00ffffff-no-rj"
+            },
+            {
               "type": "richtext",
               "html": "<p><b>Enigmática Guy</b> is a new channel dedicated to supplementary content related to Enigmática and its games. It will feature content creator reactions, livestream highlights, and other videos related to the studio's projects.&nbsp;</p><p></p><p></p><p>The purpose of the channel is to make material originally featured in longer videos or broadcasts more accessible, documenting the community's reception of the games throughout their development.</p><p>Enigmática's main channel will remain dedicated to trailers, announcements, and other official promotional material.</p><p>Although its initial publications will focus on <i>Case 27: Noema</i>, <b>Enigmática Guy</b> will also cover the studio's future projects.</p><p></p><p></p>"
             },
@@ -47,20 +54,13 @@
               "mediaKey": "e6aaec81-d662-4ad8-97f1-70b7192d46e1",
               "src": "https://www.youtube.com/watch?v=DP8mxjG08yw&t=7s",
               "alt": "An example of this format is Brazilian streamer Grifo's reaction to the Case 27: Noema trailer, available on the new channel."
-            },
-            {
-              "type": "youtube-channel",
-              "mediaKey": "3d56cce7-1c46-479e-9937-acd8bec7d734",
-              "src": "https://www.youtube.com/@Enigm%C3%A1tica-guy",
-              "alt": "",
-              "thumbnail": "https://yt3.googleusercontent.com/qHs-icbsTfepp3nzss17ukwajDAGSe5ZKyqlvgryH9ib1YeDbSOeRkT0BYbIVtxi8DdHNKmN=s900-c-k-c0x00ffffff-no-rj"
             }
           ]
         }
       },
       "createdAt": "2026-11-16T10:23:10.021Z",
-      "updatedAt": "2026-11-16T11:29:21.419Z",
-      "revision": "c0c5fae2-52a2-4599-86ae-a85e30f61c3d"
+      "updatedAt": "2026-11-16T11:49:17.012Z",
+      "revision": "becb10f5-6005-4902-ab4b-db54ebcf7ce0"
     }
   ]
 }
