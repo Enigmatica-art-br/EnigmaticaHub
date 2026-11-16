@@ -1,4 +1,52 @@
 {
   "version": 1,
-  "posts": []
+  "posts": [
+    {
+      "id": "devlog-mwj1pulz-10e240",
+      "type": "news",
+      "status": "published",
+      "publishedAt": "2026-11-16T09:13:00.000Z",
+      "showInBanner": true,
+      "isRelevant": false,
+      "banner": "assets/devlogs/60911f1e8d7ceeb9e793337a5bce7ada.png",
+      "cover": "assets/devlogs/e43f536cec03020334f4c4dd4cbbd08f.png",
+      "translations": {
+        "pt": {
+          "title": "Enigmática Guy — Um novo canal da Enigmática",
+          "summary": "A Enigmática amplia sua presença no YouTube com um canal dedicado a reações, destaques de transmissões e outros conteúdos sobre seus jogos.",
+          "blocks": [
+            {
+              "type": "richtext",
+              "html": "<p><b>Enigmática Guy</b> é um novo canal voltado à publicação de conteúdos complementares relacionados à Enigmática e aos seus jogos. Entre suas publicações estarão reações de criadores de conteúdo, destaques de transmissões ao vivo e outros vídeos relacionados aos projetos do estúdio.</p><p>https://www.youtube.com/@Enigm%C3%A1tica-guy/</p><p>A proposta é facilitar o acesso a materiais que originalmente fazem parte de vídeos ou transmissões mais extensas, reunindo registros da recepção dos jogos pela comunidade ao longo de seu desenvolvimento.</p><p>O canal principal da <b>Enigmática</b> continuará dedicado aos trailers, anúncios e demais materiais oficiais de apresentação dos jogos.</p><p>Embora as primeiras publicações estejam relacionadas a <i>Case 27: Noema</i>, o <b>Enigmática Gu</b>y também acompanhará os futuros projetos do estúdio.</p><p></p>"
+            },
+            {
+              "type": "video",
+              "mediaKey": "e6aaec81-d662-4ad8-97f1-70b7192d46e1",
+              "src": "https://www.youtube.com/watch?v=DP8mxjG08yw&t=7s",
+              "alt": "Um exemplo desse formato é a reação do streamer brasileiro Grifo ao trailer de Case 27: Noema, disponível no novo canal."
+            }
+          ]
+        },
+        "en": {
+          "title": "Enigmática Guy — A New Channel by Enigmática",
+          "summary": "Enigmática expands its YouTube presence with a channel dedicated to creator reactions, livestream highlights, and other game-related content.",
+          "blocks": [
+            {
+              "type": "richtext",
+              "html": "<b>Enigmática Guy</b> is a new channel dedicated to supplementary content related to Enigmática and its games. It will feature content creator reactions, livestream highlights, and other videos related to the studio's projects.<p></p><p>https://www.youtube.com/@Enigm%C3%A1tica-guy</p><p>The purpose of the channel is to make material originally featured in longer videos or broadcasts more accessible, documenting the community's reception of the games throughout their development.</p><p>Enigmática's main channel will remain dedicated to trailers, announcements, and other official promotional material.</p><p>Although its initial publications will focus on <i>Case 27: Noema</i>, <b>Enigmática Guy</b> will also cover the studio's future projects.</p>"
+            },
+            {
+              "type": "video",
+              "mediaKey": "e6aaec81-d662-4ad8-97f1-70b7192d46e1",
+              "src": "https://www.youtube.com/watch?v=DP8mxjG08yw&t=7s",
+              "alt": "An example of this format is Brazilian streamer Grifo's reaction to the Case 27: Noema trailer, available on the new channel."
+            }
+          ]
+        }
+      },
+      "createdAt": "2026-11-16T10:23:10.021Z",
+      "updatedAt": "2026-11-16T10:23:10.021Z",
+      "revision": "a2b2fed7-ddbd-4d49-921a-ef527656ac89"
+    }
+  ]
 }
