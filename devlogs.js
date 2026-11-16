@@ -8,7 +8,8 @@
  const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  const relevant=p=>typeof p.isRelevant==='boolean'?p.isRelevant:Number.isFinite(p.featuredRank);
  function link(p){const u=new URL('devlogs.html',location.href);u.searchParams.set('post',p.id);u.searchParams.set('lang',lang());if(preview)u.searchParams.set('preview','1');return u.pathname+u.search}
- function card(p){const c=copy(p);return `<a class="devlog-card" href="${link(p)}" data-post="${esc(p.id)}"><img src="${esc(p.cover)}" alt="" loading="lazy"><div><span class="devlog-kind">${t('devlogs.'+p.type)}</span><time datetime="${esc(p.publishedAt)}">${date(p)}</time><h3>${esc(c.title)}</h3><p>${esc(c.summary)}</p>${p.demo?`<small class="demo-label">${t('devlogs.demo')}</small>`:''}</div></a>`}
+ function card(p){const c=copy(p);return `<a class="devlog-card" href="${link(p)}" data-post="${esc(p.id)}"><img src="${esc(p.cover)}" alt="" loading="lazy"><div><h3>${esc(c.title)}</h3><time datetime="${esc(p.publishedAt)}">${date(p)}</time></div></a>`}
+
  const dialog=document.createElement('dialog');dialog.className='devlog-dialog';dialog.setAttribute('aria-labelledby','reading-title');document.body.append(dialog);
  dialog.addEventListener('click',e=>{if(e.target===dialog||e.target.closest('[data-close]'))dialog.close()});
  dialog.addEventListener('close',()=>{opened=null;document.body.classList.remove('reading');if(lastFocus?.isConnected)lastFocus.focus({preventScroll:true})});
