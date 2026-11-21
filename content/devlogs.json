@@ -2,55 +2,6 @@
   "version": 1,
   "posts": [
     {
-      "id": "devlog-mwq958dx-2c1d6a",
-      "type": "update",
-      "status": "published",
-      "publishedAt": "2026-11-21T10:15:00.000Z",
-      "showInBanner": true,
-      "hideBannerContent": false,
-      "isRelevant": true,
-      "banner": "assets/devlogs/be1bc740ad5616a720ae3959c128c000.png",
-      "cover": "assets/devlogs/2cbb080842a5fd51806e1f691b5d21ea.png",
-      "bannerLink": "",
-      "translations": {
-        "pt": {
-          "title": "#2 | Uma casa na árvore rosa",
-          "summary": "Uma nova construção integra a paisagem da ilha, acompanhada de mudanças na vegetação e de melhorias na ambientação do mapa.",
-          "blocks": [
-            {
-              "type": "richtext",
-              "html": "<p>Case 27: Noema possui agora uma casa a mais. Diferentemente das construções apresentadas anteriormente, esta foi construída ao redor do tronco de uma árvore.</p><p>Curiosamente, a árvore ocupa uma extensão consideravelmente maior que a própria construção. Sua copa rosa se sobressai entre as demais, modificando a aparência de toda a região em que está localizada.</p><p>Nas últimas etapas do desenvolvimento, também trabalhei em diversos aspectos da ambientação da ilha, desde a distribuição da vegetação até a iluminação e a composição das paisagens. Algumas regiões receberam novos elementos, enquanto outras tiveram sua aparência levemente reformulada.</p><p>Em meio a essas alterações, uma pequena casa de madeira passou a ocupar um espaço que, anteriormente, pertencia apenas à árvore.</p>"
-            },
-            {
-              "type": "image",
-              "mediaKey": "bfe91ec1-220c-492f-b6cf-1adc98d1ef4d",
-              "src": "assets/devlogs/83169da0112f998351ca852d31b8918b.png",
-              "alt": ""
-            }
-          ]
-        },
-        "en": {
-          "title": "The treehouse in the pink tree",
-          "summary": "The island has gained a new structure, an unusual tree, and several changes to its landscape.",
-          "blocks": [
-            {
-              "type": "richtext",
-              "html": "<p>Case 27: Noema now has one more house. Unlike the buildings shown previously, this one was built around the trunk of a tree.</p><p>Curiously, the tree occupies considerably more space than the structure itself. Its pink canopy stands out among the surrounding trees, transforming the appearance of the entire area.</p><p>During the latest stages of development, I have also worked on several aspects of the island's environment, from vegetation placement to lighting and landscape composition. Some areas have gained new elements, while others have undergone subtle visual changes.</p><p>Amid these changes, a small wooden house has come to occupy a space that once belonged solely to the tree.</p>"
-            },
-            {
-              "type": "image",
-              "mediaKey": "bfe91ec1-220c-492f-b6cf-1adc98d1ef4d",
-              "src": "assets/devlogs/83169da0112f998351ca852d31b8918b.png",
-              "alt": ""
-            }
-          ]
-        }
-      },
-      "createdAt": "2026-11-21T10:37:41.841Z",
-      "updatedAt": "2026-11-21T10:38:46.185Z",
-      "revision": "d92acaaa-a6f8-4e3e-b60f-54a0ee88a134"
-    },
-    {
       "id": "devlog-mwj1pulz-10e240",
       "type": "news",
       "status": "published",
@@ -112,6 +63,55 @@
       "revision": "cfd4fb2e-6b6e-494c-bdd7-3abda978eea2",
       "bannerLink": "",
       "hideBannerContent": false
+    },
+    {
+      "id": "devlog-mwq958dx-2c1d6a",
+      "type": "update",
+      "status": "published",
+      "publishedAt": "2026-11-21T10:15:00.000Z",
+      "showInBanner": true,
+      "hideBannerContent": false,
+      "isRelevant": true,
+      "banner": "assets/devlogs/be1bc740ad5616a720ae3959c128c000.png",
+      "cover": "assets/devlogs/2cbb080842a5fd51806e1f691b5d21ea.png",
+      "bannerLink": "",
+      "translations": {
+        "pt": {
+          "title": "#2 | Uma casa na árvore rosa",
+          "summary": "Uma nova construção integra a paisagem da ilha, acompanhada de mudanças na vegetação e de melhorias na ambientação do mapa.",
+          "blocks": [
+            {
+              "type": "richtext",
+              "html": "<p>Case 27: Noema possui agora uma casa a mais. Diferentemente das construções apresentadas anteriormente, esta foi construída ao redor do tronco de uma árvore.</p><p>Curiosamente, a árvore ocupa uma extensão consideravelmente maior que a própria construção. Sua copa rosa se sobressai entre as demais, modificando a aparência de toda a região em que está localizada.</p><p>Nas últimas etapas do desenvolvimento, também trabalhei em diversos aspectos da ambientação da ilha, desde a distribuição da vegetação até a iluminação e a composição das paisagens. Algumas regiões receberam novos elementos, enquanto outras tiveram sua aparência levemente reformulada.</p><p>Em meio a essas alterações, uma pequena casa de madeira passou a ocupar um espaço que, anteriormente, pertencia apenas à árvore.</p>"
+            },
+            {
+              "type": "image",
+              "mediaKey": "bfe91ec1-220c-492f-b6cf-1adc98d1ef4d",
+              "src": "assets/devlogs/83169da0112f998351ca852d31b8918b.png",
+              "alt": ""
+            }
+          ]
+        },
+        "en": {
+          "title": "#2 | The treehouse in the pink tree",
+          "summary": "The island has gained a new structure, an unusual tree, and several changes to its landscape.",
+          "blocks": [
+            {
+              "type": "richtext",
+              "html": "<p>Case 27: Noema now has one more house. Unlike the buildings shown previously, this one was built around the trunk of a tree.</p><p>Curiously, the tree occupies considerably more space than the structure itself. Its pink canopy stands out among the surrounding trees, transforming the appearance of the entire area.</p><p>During the latest stages of development, I have also worked on several aspects of the island's environment, from vegetation placement to lighting and landscape composition. Some areas have gained new elements, while others have undergone subtle visual changes.</p><p>Amid these changes, a small wooden house has come to occupy a space that once belonged solely to the tree.</p>"
+            },
+            {
+              "type": "image",
+              "mediaKey": "bfe91ec1-220c-492f-b6cf-1adc98d1ef4d",
+              "src": "assets/devlogs/83169da0112f998351ca852d31b8918b.png",
+              "alt": ""
+            }
+          ]
+        }
+      },
+      "createdAt": "2026-11-21T10:37:41.841Z",
+      "updatedAt": "2026-11-21T10:40:00.764Z",
+      "revision": "e9e7ee45-de39-45cb-9ab5-491d9ece43c7"
     }
   ]
 }
