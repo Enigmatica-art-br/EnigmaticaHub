@@ -77,7 +77,7 @@
       "bannerLink": "",
       "translations": {
         "pt": {
-          "title": "Uma casa na árvore rosa",
+          "title": "#2 | Uma casa na árvore rosa",
           "summary": "Uma nova construção integra a paisagem da ilha, acompanhada de mudanças na vegetação e de melhorias na ambientação do mapa.",
           "blocks": [
             {
@@ -110,8 +110,8 @@
         }
       },
       "createdAt": "2026-11-21T10:37:41.841Z",
-      "updatedAt": "2026-11-21T10:37:41.842Z",
-      "revision": "38230fec-3516-4f35-ad58-ce29c0d5f3af"
+      "updatedAt": "2026-11-21T10:38:46.185Z",
+      "revision": "d92acaaa-a6f8-4e3e-b60f-54a0ee88a134"
     }
   ]
 }
