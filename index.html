@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="styles.css?v=20261121-gold">
   <title>Enigmática</title>
   <link rel="stylesheet" href="devlogs.css?v=20261121-layout">
-<link rel="stylesheet" href="preview-theme.css?v=6">
+<link rel="stylesheet" href="preview-theme.css?v=20261125-games">
 </head>
 <body>
   <div class="bg" aria-hidden="true"></div>
@@ -49,13 +49,14 @@
 
     <section class="block" id="games" aria-labelledby="games-title">
       <h2 class="h" id="games-title" data-i18n="nav.games">Games</h2>
-      <div class="games">
+      <div class="games-carousel">
+      <div class="games" id="games-list">
         <article class="panel game">
           <a class="shot" href="https://games.enigmatica.art.br/noema/" tabindex="-1" aria-hidden="true"><img src="assets/img/noema-castelo.jpg" alt="" loading="lazy" width="960" height="540"></a>
           <div class="p">
             <p class="st" data-i18n="noema.status">In development for PC · 2027</p>
             <h3>Case 27: Noema</h3>
-            <p class="tx" data-i18n="noema.text">Case 27: Noema is a non-linear, first-person investigation and puzzle game set on an island. Explore freely, uncover its secrets, and decipher the languages that conceal a dark, philosophical story.</p>
+            <p class="tx" data-i18n="noema.text">A non-linear, first-person investigation and puzzle game set on an island. Explore freely, uncover its secrets, and decipher the languages that conceal a dark, philosophical story.</p>
             <div class="row">
               <a class="b on" href="https://games.enigmatica.art.br/noema/" data-i18n="noema.site">Official site</a>
               <a class="b" href="https://store.steampowered.com/app/5361160" target="_blank" rel="noopener noreferrer"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M11.979 0C5.678 0 .511 4.86.022 11.037l6.432 2.658c.545-.371 1.203-.59 1.912-.59.063 0 .125.004.188.006l2.861-4.142V8.91c0-2.495 2.028-4.524 4.524-4.524 2.494 0 4.524 2.031 4.524 4.527s-2.03 4.525-4.524 4.525h-.105l-4.076 2.911c0 .052.004.105.004.159 0 1.875-1.515 3.396-3.39 3.396-1.635 0-3.016-1.173-3.331-2.727L.436 15.27C1.862 20.307 6.486 24 11.979 24c6.627 0 11.999-5.373 11.999-12S18.605 0 11.979 0zM7.54 18.21l-1.473-.61c.262.543.714.999 1.314 1.25 1.297.539 2.793-.076 3.332-1.375.263-.63.264-1.319.005-1.949s-.75-1.121-1.377-1.383c-.624-.26-1.29-.249-1.878-.03l1.523.63c.956.4 1.409 1.5 1.009 2.455-.397.957-1.497 1.41-2.454 1.012H7.54zm11.415-9.303c0-1.662-1.353-3.015-3.015-3.015-1.665 0-3.015 1.353-3.015 3.015 0 1.665 1.35 3.015 3.015 3.015 1.663 0 3.015-1.35 3.015-3.015zm-5.273-.005c0-1.252 1.013-2.266 2.265-2.266 1.249 0 2.266 1.014 2.266 2.266 0 1.251-1.017 2.265-2.266 2.265-1.253 0-2.265-1.014-2.265-2.265z"/></svg>Steam</a>
@@ -72,6 +73,18 @@
             <div class="row"><a class="b on" href="https://blackdiamond.enigmatica.art.br/" data-i18n="bd.enter">Visit the site</a></div>
           </div>
         </article>
+        <article class="panel game">
+          <a class="shot" href="https://daily.enigmatica.art.br/matematico/" tabindex="-1" aria-hidden="true"><img src="assets/img/matematico.jpg" alt="" loading="lazy" width="1265" height="712" style="object-position:top"></a>
+          <div class="p">
+            <p class="st" data-i18n="math.status">Educational browser game</p>
+            <h3>Matemático</h3>
+            <p class="tx" data-i18n="math.text">An educational browser game with daily maths questions from Brazil’s Exame Nacional do Ensino Médio (Enem), an exam used for university admission. Solve a new challenge every day.</p>
+            <div class="row"><a class="b on" href="https://daily.enigmatica.art.br/matematico/" data-i18n="math.site">Visit the site</a></div>
+          </div>
+        </article>
+      </div>
+      <button type="button" class="games-arrow previous" data-games-move="-1" aria-controls="games-list" aria-label="Previous games" data-i18n-attr="aria-label:games.previous" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 6-6 6 6 6"/></svg></button>
+      <button type="button" class="games-arrow next" data-games-move="1" aria-controls="games-list" aria-label="More games" data-i18n-attr="aria-label:games.next" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m10 6 6 6-6 6"/></svg></button>
       </div>
     </section>
 
@@ -100,7 +113,7 @@
   </footer>
 
   <script src="i18n.js?v=20261116-global"></script>
-  <script src="site.js?v=20261116-details"></script>
+  <script src="site.js?v=20261125-games"></script>
   <script src="devlog-data.js?v=20261112"></script>
   <script src="rich-content.js?v=20261116-standard"></script>
   <script src="devlogs.js?v=20261121-circular"></script>

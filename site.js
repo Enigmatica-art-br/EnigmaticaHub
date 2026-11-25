@@ -15,8 +15,12 @@ window.I18N = {
     'trailer.play': 'Assistir ao trailer',
     'trailer.label': 'Trailer oficial',
     'noema.status': 'Em desenvolvimento para PC · 2027',
-    'noema.text': 'Case 27: Noema é um jogo não linear de investigação e puzzle em primeira pessoa, ambientado numa ilha. Explore livremente, descubra seus segredos e decifre as linguagens que escondem uma história sombria e filosófica.',
+    'noema.text': 'Um jogo não linear de investigação e puzzle em primeira pessoa, ambientado numa ilha. Explore livremente, descubra seus segredos e decifre as linguagens que escondem uma história sombria e filosófica.',
     'noema.site': 'Site oficial',
+    'math.status': 'Jogo educativo de navegador',
+    'math.text': 'Um jogo educativo de navegador com questões diárias de matemática do Exame Nacional do Ensino Médio (Enem), exame brasileiro usado no ingresso ao ensino superior. Resolva um novo desafio a cada dia.',
+    'math.site': 'Acessar o site',
+    'games.previous': 'Jogos anteriores', 'games.next': 'Mais jogos',
     'bd.status': 'ARG em desenvolvimento · 2027',
     'bd.text': 'Inspirado nos clássicos Alternate Reality Games (ARGs) da internet, Black Diamond apresenta uma seleção de enigmas originais de complexidade excepcional, construídos a partir de ideias inventivas e de uma curva de dificuldade cada vez mais exigente.',
     'bd.enter': 'Visitar o site',
@@ -39,8 +43,12 @@ window.I18N = {
     'trailer.play': 'Play the trailer',
     'trailer.label': 'Official trailer',
     'noema.status': 'In development for PC · 2027',
-    'noema.text': 'Case 27: Noema is a non-linear, first-person investigation and puzzle game set on an island. Explore freely, uncover its secrets, and decipher the languages that conceal a dark, philosophical story.',
+    'noema.text': 'A non-linear, first-person investigation and puzzle game set on an island. Explore freely, uncover its secrets, and decipher the languages that conceal a dark, philosophical story.',
     'noema.site': 'Official site',
+    'math.status': 'Educational browser game',
+    'math.text': 'An educational browser game with daily maths questions from Brazil’s Exame Nacional do Ensino Médio (Enem), an exam used for university admission. Solve a new challenge every day.',
+    'math.site': 'Visit the site',
+    'games.previous': 'Previous games', 'games.next': 'More games',
     'bd.status': 'ARG in development · 2027',
     'bd.text': 'Inspired by classic internet Alternate Reality Games (ARGs), Black Diamond features a selection of exceptionally complex, original puzzles built around inventive ideas and an increasingly demanding difficulty curve.',
     'bd.enter': 'Visit the site',
@@ -76,4 +84,12 @@ window.I18N = {
       btn.replaceWith(f);
     });
   });
+})();
+
+(function(){
+ const row=document.querySelector('.games-carousel .games');if(!row)return;
+ const previous=document.querySelector('[data-games-move="-1"]'),next=document.querySelector('[data-games-move="1"]'),cards=[...row.children];
+ function update(){const canBack=row.scrollLeft>2,canNext=row.scrollLeft<row.scrollWidth-row.clientWidth-2;previous.hidden=!canBack;next.hidden=!canNext;const viewport=row.getBoundingClientRect();cards.forEach(card=>{const rect=card.getBoundingClientRect(),outside=rect.right<=viewport.left+1||rect.left>=viewport.right-1;card.inert=outside;card.setAttribute('aria-hidden',String(outside))});if(document.activeElement===next&&!canNext&&canBack)previous.focus({preventScroll:true});else if(document.activeElement===previous&&!canBack&&canNext)next.focus({preventScroll:true})}
+ for(const button of [previous,next])button.addEventListener('click',()=>{const step=cards[0].getBoundingClientRect().width+parseFloat(getComputedStyle(row).columnGap),max=row.scrollWidth-row.clientWidth,target=Math.max(0,Math.min(max,row.scrollLeft+Number(button.dataset.gamesMove)*step));row.scrollTo({left:target,behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'instant':'smooth'})});
+ row.addEventListener('scroll',update,{passive:true});new ResizeObserver(update).observe(row);requestAnimationFrame(update);
 })();
